@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link href="../output.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <title>404 Not Found - Alfreezzz_</title>
+    <link rel="icon" href="../assets/images/IMG_20241107_055309.jpg" />
+  </head>
+  <body class="bg-black text-[#C7EEFF] min-h-screen h-full">
+    <div class="min-h-screen flex flex-col">
+      <nav
+        x-data="{ open: false }"
+        class="w-full xl:px-32 px-3 sm:px-5 sm:py-5 py-3 flex justify-between items-center bg-black bg-opacity-90 fixed top-0 left-0 z-50"
+      >
+        <label for="Alfreezzz_">
+          <a
+            href="index.html#about"
+            class="text-xl font-pixelmono bg-black px-6 drop-shadow-[0_0px_4px_rgb(0,119,192)] rounded-lg py-1.5"
+            >Alfreezzz_</a
+          >
+        </label>
+        <!-- Desktop Navigation -->
+        <ul
+          class="hidden lg:flex lg:space-x-8 text-sm font-light tracking-wide bg-black drop-shadow-[0_0px_4px_rgb(0,119,192)] px-8 py-1.5 rounded-full"
+        >
+          <li>
+            <a href="index.html#hero" class="relative group"
+              >Hero<span
+                class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+              ></span
+            ></a>
+          </li>
+          <li>
+            <a href="index.html#about" class="relative group"
+              >About<span
+                class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+              ></span
+            ></a>
+          </li>
+          <li>
+            <a href="index.html#experience" class="relative group"
+              >Experience<span
+                class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+              ></span
+            ></a>
+          </li>
+          <li>
+            <a href="index.html#project" class="relative group"
+              >Project<span
+                class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+              ></span
+            ></a>
+          </li>
+          <li>
+            <a href="index.html#blog" class="relative group"
+              >Blog<span
+                class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+              ></span
+            ></a>
+          </li>
+          <li>
+            <a href="index.html#contact" class="relative group"
+              >Contact<span
+                class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+              ></span
+            ></a>
+          </li>
+        </ul>
+        <!-- Mobile Hamburger -->
+        <button @click="open = !open" class="lg:hidden focus:outline-none">
+          <div
+            class="relative w-7 h-8 flex flex-col justify-center items-center space-y-1.5"
+          >
+            <span
+              :class="{'rotate-45 translate-y-[8px]': open, 'translate-y-0': !open}"
+              class="block w-7 h-0.5 bg-white transition-all duration-300"
+            ></span>
+            <span
+              :class="{'opacity-0': open, 'opacity-100': !open}"
+              class="block w-7 h-0.5 bg-white transition-all duration-300"
+            ></span>
+            <span
+              :class="{'-rotate-45 -translate-y-[8px]': open, 'translate-y-0': !open}"
+              class="block w-7 h-0.5 bg-white transition-all duration-300"
+            ></span>
+          </div>
+        </button>
+        <!-- Mobile Navigation -->
+        <div
+          x-show="open"
+          @click.outside="open = false"
+          @keyup.esc.window="open = false"
+          x-transition.origin.top.duration.300ms
+          class="absolute top-14 sm:top-[4.5rem] left-0 w-full bg-black bg-opacity-90 text-sm font-light flex flex-col space-y-4 px-5 py-5 lg:hidden"
+        >
+          <a
+            href="index.html#hero"
+            class="relative group font-medium tracking-wide text-lg"
+            >Hero<span
+              class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+            ></span
+          ></a>
+          <a
+            href="index.html#about"
+            class="relative group font-medium tracking-wide text-lg"
+            >About<span
+              class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+            ></span
+          ></a>
+          <a
+            href="index.html#experience"
+            class="relative group font-medium tracking-wide text-lg"
+            >Experience<span
+              class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+            ></span
+          ></a>
+          <a
+            href="index.html#project"
+            class="relative group font-medium tracking-wide text-lg"
+            >Project<span
+              class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+            ></span
+          ></a>
+          <a
+            href="index.html#blog"
+            class="relative group font-medium tracking-wide text-lg"
+            >Blog<span
+              class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+            ></span
+          ></a>
+          <a
+            href="index.html#contact"
+            class="relative group font-medium tracking-wide text-lg"
+            >Contact<span
+              class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+            ></span
+          ></a>
+        </div>
+      </nav>
+
+      <main class="flex-grow">
+        <div class="min-h-screen flex items-center justify-center">
+          <div
+            class="flex flex-col justify-center items-center sm:mx-5 w-full xl:mx-32 mx-3"
+          >
+            <h1
+              class="text-center lg:text-5xl mobile-m:text-4xl text-3xl font-bold tracking-wide lg:py-3 pb-5 sm:pb-4 bg-gradient-to-b from-[#0077C0] via-[#0077C0] to-[#C7EEFF] bg-clip-text text-transparent"
+            >
+              -- 404 Not Found --
+            </h1>
+            <h2
+              class="font-extralight text-center tracking-wider lg:text-base mobile-m:text-sm text-xs italic max-lg:-mt-3 mb-5"
+            >
+              The page you are looking for is not available
+            </h2>
+            <a
+              href="index.html#project"
+              class="mt-4 inline-flex group drop-shadow-[0_1px_3px_rgb(199,238,255)] hover:brightness-150 font-semibold bg-black border-1 border-[#C7EEFF] items-center justify-center rounded-lg sm:px-4 px-3 py-1.5 transition"
+            >
+              <svg
+                class="w-4 h-4 lg:w-5 lg:h-5 mr-1 group-hover:-translate-x-1.5 transition"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 -960 960 960"
+                fill="#C7EEFF"
+              >
+                <path
+                  d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"
+                />
+              </svg>
+              <span class="sm:text-base text-sm text-[#C7EEFF]">Go back</span>
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <footer
+        class="container max-w-none py-6 mx-auto text-center border xl:rounded-t-full rounded-t-3xl border-[#0077C0] lg:mt-32 mt-20"
+      >
+        <p class="sm:text-sm text-xs tracking-wider font-sans">
+          Made with ❤ by
+          <a
+            href="https://www.instagram.com/alfreezzz_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-[#00a3c0] text-base hover:underline decoration-2 decoration-dashed ml-1 font-pixelsans"
+          >
+            Alfriza Akhmad Rahadi.
+          </a>
+          <span class="max-mobile-m:hidden"> &copy;2025</span>
+        </p>
+        <span class="mobile-m:hidden text-sm">&copy;2025</span>
+      </footer>
+    </div>
+  </body>
+</html>

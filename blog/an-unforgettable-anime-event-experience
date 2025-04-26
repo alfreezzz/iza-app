@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link href="../output.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <title>An Unforgettable Anime Event Experience - Alfreezzz_</title>
+    <link rel="icon" href="../assets/images/IMG_20241107_055309.jpg" />
+  </head>
+  <body class="bg-black text-[#C7EEFF] min-h-screen h-full">
+    <div class="min-h-screen flex flex-col">
+      <nav
+        x-data="{ open: false }"
+        class="w-full xl:px-32 px-3 sm:px-5 sm:py-5 py-3 flex justify-between items-center bg-black bg-opacity-90 fixed top-0 left-0 z-50"
+      >
+        <label for="Alfreezzz_">
+          <a
+            href="../index.html#about"
+            class="text-xl font-pixelmono bg-black px-6 drop-shadow-[0_0px_4px_rgb(0,119,192)] rounded-lg py-1.5"
+            >Alfreezzz_</a
+          >
+        </label>
+        <!-- Desktop Navigation -->
+        <ul
+          class="hidden lg:flex lg:space-x-8 text-sm font-light tracking-wide bg-black drop-shadow-[0_0px_4px_rgb(0,119,192)] px-8 py-1.5 rounded-full"
+        >
+          <li>
+            <a href="../index.html#hero" class="relative group"
+              >Hero<span
+                class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+              ></span
+            ></a>
+          </li>
+          <li>
+            <a href="../index.html#about" class="relative group"
+              >About<span
+                class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+              ></span
+            ></a>
+          </li>
+          <li>
+            <a href="../index.html#experience" class="relative group"
+              >Experience<span
+                class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+              ></span
+            ></a>
+          </li>
+          <li>
+            <a href="../index.html#project" class="relative group"
+              >Project<span
+                class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+              ></span
+            ></a>
+          </li>
+          <li>
+            <a href="../index.html#blog" class="relative group"
+              >Blog<span
+                class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+              ></span
+            ></a>
+          </li>
+          <li>
+            <a href="../index.html#contact" class="relative group"
+              >Contact<span
+                class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+              ></span
+            ></a>
+          </li>
+        </ul>
+        <!-- Mobile Hamburger -->
+        <button @click="open = !open" class="lg:hidden focus:outline-none">
+          <div
+            class="relative w-7 h-8 flex flex-col justify-center items-center space-y-1.5"
+          >
+            <span
+              :class="{'rotate-45 translate-y-[8px]': open, 'translate-y-0': !open}"
+              class="block w-7 h-0.5 bg-white transition-all duration-300"
+            ></span>
+            <span
+              :class="{'opacity-0': open, 'opacity-100': !open}"
+              class="block w-7 h-0.5 bg-white transition-all duration-300"
+            ></span>
+            <span
+              :class="{'-rotate-45 -translate-y-[8px]': open, 'translate-y-0': !open}"
+              class="block w-7 h-0.5 bg-white transition-all duration-300"
+            ></span>
+          </div>
+        </button>
+        <!-- Mobile Navigation -->
+        <div
+          x-show="open"
+          @click.outside="open = false"
+          @keyup.esc.window="open = false"
+          x-transition.origin.top.duration.300ms
+          class="absolute top-14 sm:top-[4.5rem] left-0 w-full bg-black bg-opacity-90 text-sm font-light flex flex-col space-y-4 px-5 py-5 lg:hidden"
+        >
+          <a
+            href="../index.html#hero"
+            class="relative group font-medium tracking-wide text-lg"
+            >Hero<span
+              class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+            ></span
+          ></a>
+          <a
+            href="../index.html#about"
+            class="relative group font-medium tracking-wide text-lg"
+            >About<span
+              class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+            ></span
+          ></a>
+          <a
+            href="../index.html#experience"
+            class="relative group font-medium tracking-wide text-lg"
+            >Experience<span
+              class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+            ></span
+          ></a>
+          <a
+            href="../index.html#project"
+            class="relative group font-medium tracking-wide text-lg"
+            >Project<span
+              class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+            ></span
+          ></a>
+          <a
+            href="../index.html#blog"
+            class="relative group font-medium tracking-wide text-lg"
+            >Blog<span
+              class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+            ></span
+          ></a>
+          <a
+            href="../index.html#contact"
+            class="relative group font-medium tracking-wide text-lg"
+            >Contact<span
+              class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
+            ></span
+          ></a>
+        </div>
+      </nav>
+
+      <main class="flex-grow">
+        <div
+          id="blog"
+          class="xl:px-32 px-3 sm:px-5 mt-32 flex max-lg:flex-col lg:justify-between"
+        >
+          <div class="grow-2 shrink lg:basis-[65%] basis-full lg:pr-5">
+            <div class="leading-relaxed">
+              <h1 class="sm:text-4xl text-2xl font-bold tracking-wide mb-1">
+                An Unforgettable Anime Event Experience
+              </h1>
+              <div class="mb-4 mt-2">
+                <p class="sm:text-sm text-xs font-light tracking-wider">
+                  28 Dec 2024 •
+                  <a
+                    href="../index.html&amp;jenis_artikel=Personal+Blog#blog"
+                    class="font-medium hover:text-gray-400"
+                  >
+                    Personal Blog
+                  </a>
+                </p>
+              </div>
+              <img
+                src="../assets/images/An Unforgettable Anime Event Experience.jpg"
+                alt="Article image"
+                class="w-full max-h-[350px] object-cover lg:mb-8 mb-3 lg:mt-5 mt-4 rounded-lg"
+              />
+              <p
+                class="tracking-wider text-justify text-base leading-relaxed whitespace-pre-line"
+              >
+                Attending an anime event has always been on my bucket list, and
+                recently, I finally got the chance to experience one. From the
+                moment I stepped into the venue, I was shocked by the length of
+                the queue to get inside. I barely could feel my leg, and the
+                sunlight was burning my skin. Thankfully, I used a skincare and
+                brought an umbrella. But once I made it inside, I was really
+                excited because I had never experienced a big event before.
+                Cosplay Galore One of the most exciting aspects of the event was
+                hunting the cosplayers. People went all out, dressing up as
+                their favorite characters with incredible attention to detail.
+                From anime character and game character, to meme character, the
+                variety was astonishing. I even took pictures with some of the
+                cosplayers, who were more than happy to bring my favorite
+                characters to life before my own eyes. Merchandise Wonderland
+                The event was a paradise for anime collectors. There were
+                countless booths selling anime merchandise, including posters,
+                keychains, figurines, and even limited-edition items. It&#039;s
+                too bad that the merchandise that I wanted was pretty expensive,
+                although I did get some free stickers and a fan. Live
+                Performances One of the highlights was attending a live
+                performance by a famous singer. The energy of the crowd was
+                infectious, and I found myself singing along with everyone.
+                Meeting Famous Content Creator Another exciting moment was
+                meeting a famous content creator that I’ve followed for a long
+                time. Seeing them in person felt unreal. Unfortunately, I
+                didn&#039;t get the chance to take a picture, and I even missed
+                meeting one of my favorite Youtubers, I wish I could go back in
+                time just to take a picture that person. Final Thoughts
+                Reflecting on this experience, I realize how much joy and
+                excitement an anime event can bring. Despite a few regrets, like
+                missing a photo opportunity, the event was unforgettable. If you
+                ever get the chance to attend an anime event, go for it! It’s an
+                adventure that will leave you with lasting memories.
+              </p>
+            </div>
+            <div
+              class="mt-7 max-lg:mb-12 flex justify-between w-full items-center"
+            >
+              <a
+                href="../index.html#blog"
+                class="inline-flex group drop-shadow-[0_1px_3px_rgb(199,238,255)] hover:brightness-150 font-semibold bg-black border-1 border-[#C7EEFF] items-center justify-center rounded-lg sm:px-4 px-3 py-1.5 transition"
+              >
+                <svg
+                  class="w-4 h-4 lg:w-5 lg:h-5 mr-1 group-hover:-translate-x-1.5 transition"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 -960 960 960"
+                  fill="#C7EEFF"
+                >
+                  <path
+                    d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"
+                  />
+                </svg>
+                <span class="sm:text-base text-sm text-[#C7EEFF]">Go back</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer
+        class="container max-w-none py-6 mx-auto text-center border xl:rounded-t-full rounded-t-3xl border-[#0077C0] lg:mt-32 mt-20"
+      >
+        <p class="sm:text-sm text-xs tracking-wider font-sans">
+          Made with ❤ by
+          <a
+            href="https://www.instagram.com/alfreezzz_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-[#00a3c0] text-base hover:underline decoration-2 decoration-dashed ml-1 font-pixelsans"
+          >
+            Alfriza Akhmad Rahadi.
+          </a>
+          <span class="max-mobile-m:hidden"> &copy;2025</span>
+        </p>
+        <span class="mobile-m:hidden text-sm">&copy;2025</span>
+      </footer>
+    </div>
+  </body>
+</html>
