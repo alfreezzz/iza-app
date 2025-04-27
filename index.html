@@ -1084,9 +1084,41 @@
                 An Unforgettable Anime Event Experience
               </h3>
             </a>
-            <div class="mb-4">
+            <div
+              x-data="{
+              targetDate: new Date('2024-12-28'),
+              currentDate: new Date(),
+              getTimeAgo() {
+                const diffInMs = this.currentDate - this.targetDate;
+                const diffInSeconds = Math.floor(diffInMs / 1000);
+                const diffInMinutes = Math.floor(diffInSeconds / 60);
+                const diffInHours = Math.floor(diffInMinutes / 60);
+                const diffInDays = Math.floor(diffInHours / 24);
+                const diffInWeeks = Math.floor(diffInDays / 7);
+                const diffInMonths = Math.floor(diffInDays / 30);
+                const diffInYears = Math.floor(diffInDays / 365);
+        
+                if (diffInYears > 0) {
+                  return diffInYears + ' years ago';
+                } else if (diffInMonths > 0) {
+                  return diffInMonths + ' months ago';
+                } else if (diffInWeeks > 0) {
+                  return diffInWeeks + ' weeks ago';
+                } else if (diffInDays > 0) {
+                  return diffInDays + ' days ago';
+                } else if (diffInHours > 0) {
+                  return diffInHours + ' hours ago';
+                } else if (diffInMinutes > 0) {
+                  return diffInMinutes + ' minutes ago';
+                } else {
+                  return diffInSeconds + ' seconds ago';
+                }
+              }
+            }"
+              class="mb-4"
+            >
               <p class="font-extralight text-sm">
-                3 months ago •
+                <span x-text="getTimeAgo()"></span> •
                 <a
                   href=".?jenis_artikel=Personal+Blog#blog"
                   class="font-medium hover:text-gray-400"
@@ -1095,6 +1127,7 @@
                 </a>
               </p>
             </div>
+
             <a href="./an-unforgettable-anime-event-experience">
               <p class="hover:underline text-sm leading-relaxed">
                 Attending an anime event has always been on my bucket list, and
@@ -1512,9 +1545,19 @@
         >
           Alfriza Akhmad Rahadi.
         </a>
-        <span class="max-mobile-m:hidden"> &copy;2025</span>
+        <span
+          x-data="{ year: new Date().getFullYear() }"
+          class="max-mobile-m:hidden"
+        >
+          &copy;<span x-text="year"></span>
+        </span>
       </p>
-      <span class="mobile-m:hidden text-sm">&copy;2025</span>
+      <span
+        x-data="{ year: new Date().getFullYear() }"
+        class="mobile-m:hidden text-sm"
+      >
+        &copy;<span x-text="year"></span>
+      </span>
     </footer>
   </body>
   <script src="./assets/js/script.js"></script>
