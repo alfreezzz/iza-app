@@ -1779,7 +1779,7 @@ video {
 @font-face {
   font-family: 'DeterminationMono';
 
-  src: url('assets/fonts/DeterminationMonoWebRegular-Z5oq.ttf')
+  src: url('/iza-app/assets/fonts/DeterminationMonoWebRegular-Z5oq.ttf')
     format('truetype');
 
   font-weight: 400;
@@ -1790,7 +1790,7 @@ video {
 @font-face {
   font-family: 'DeterminationSans';
 
-  src: url('assets/fonts/DeterminationSansWebRegular-369X.ttf')
+  src: url('/iza-app/assets/fonts/DeterminationSansWebRegular-369X.ttf')
     format('truetype');
 
   font-weight: 400;
