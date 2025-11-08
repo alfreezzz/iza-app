@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link href="./output.css" rel="stylesheet" />
+    <link href="/output.css" rel="stylesheet" />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
     <title>Alfreezzz_</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="icon" href="./assets/images/IMG_20241107_055309.jpg" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="icon" type="image/jpeg" href="/assets/images/IMG_20241107_055309.jpg" />
+    <link rel="apple-touch-icon" href="/assets/images/IMG_20241107_055309.jpg" />
   </head>
   <body class="bg-black text-[#C7EEFF]">
     <nav
       x-data="{ open: false }"
-      class="w-full xl:px-32 px-3 sm:px-5 sm:py-5 py-3 flex justify-between items-center bg-black bg-opacity-90 fixed top-0 left-0 z-50"
+      class="fixed top-0 left-0 z-50 flex items-center justify-between w-full px-3 py-3 bg-black xl:px-32 sm:px-5 sm:py-5 bg-opacity-90"
     >
       <label for="Alfreezzz_">
         <a
@@ -100,40 +101,40 @@
         x-transition.origin.top.duration.300ms
         class="absolute top-14 sm:top-[4.5rem] left-0 w-full bg-black bg-opacity-90 text-sm font-light flex flex-col space-y-4 px-5 py-5 lg:hidden"
       >
-        <a href="#hero" class="relative group font-medium tracking-wide text-lg"
+        <a href="#hero" class="relative text-lg font-medium tracking-wide group"
           >Hero<span
             class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
           ></span
         ></a>
         <a
           href="#about"
-          class="relative group font-medium tracking-wide text-lg"
+          class="relative text-lg font-medium tracking-wide group"
           >About<span
             class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
           ></span
         ></a>
         <a
           href="#experience"
-          class="relative group font-medium tracking-wide text-lg"
+          class="relative text-lg font-medium tracking-wide group"
           >Experience<span
             class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
           ></span
         ></a>
         <a
           href="#project"
-          class="relative group font-medium tracking-wide text-lg"
+          class="relative text-lg font-medium tracking-wide group"
           >Project<span
             class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
           ></span
         ></a>
-        <a href="#blog" class="relative group font-medium tracking-wide text-lg"
+        <a href="#blog" class="relative text-lg font-medium tracking-wide group"
           >Blog<span
             class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
           ></span
         ></a>
         <a
           href="#contact"
-          class="relative group font-medium tracking-wide text-lg"
+          class="relative text-lg font-medium tracking-wide group"
           >Contact<span
             class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#0077C0] transition-all duration-300 group-hover:w-full"
           ></span
@@ -141,8 +142,8 @@
       </div>
     </nav>
 
-    <div id="hero" class="container lg:pb-32 py-5 pb-64 sm:pb-48">
-      <div class="xl:px-32 px-3 sm:px-5 lg:pt-44 pt-56 sm:pt-60">
+    <div id="hero" class="container py-5 pb-64 lg:pb-32 sm:pb-48">
+      <div class="px-3 pt-56 xl:px-32 sm:px-5 lg:pt-44 sm:pt-60">
         <h3
           class="text-black font-pixelmono lg:text-2xl text-base sm:text-lg uppercase -ml-0.5 inline-block px-3"
         >
@@ -150,19 +151,19 @@
         </h3>
         <br />
         <h1
-          class="lg:text-9xl text-6xl sm:text-8xl font-pixelsans lg:-mt-4 typing-loop-animation"
+          class="text-6xl lg:text-9xl sm:text-8xl font-pixelsans lg:-mt-4 typing-loop-animation"
         >
           Hello World!
         </h1>
         <p
-          class="lg:max-w-xl max-w-md text-sm sm:text-base sm:max-w-sm sm:font-light font-extralight"
+          class="max-w-md text-sm lg:max-w-xl sm:text-base sm:max-w-sm sm:font-light font-extralight"
         >
           I am Alfriza, a Web Developer aspiring to become a
           <span class="italic font-medium">Full-Stack Developer</span>.
         </p>
         <br />
         <div
-          class="button-container flex justify-start lg:space-x-5 space-x-3 sm:space-x-4"
+          class="flex justify-start space-x-3 button-container lg:space-x-5 sm:space-x-4"
         >
           <a
             href="#contact"
@@ -200,9 +201,9 @@
       </div>
     </div>
 
-    <div id="about" class="scroll-section lg:mt-36 mt-32 xl:px-32 px-3 sm:px-5">
+    <div id="about" class="px-3 mt-32 scroll-section lg:mt-36 xl:px-32 sm:px-5">
       <div
-        class="about relative flex sm:flex-row flex-col lg:gap-0 sm:gap-12 items-center lg:px-8 sm:px-5 px-3"
+        class="relative flex flex-col items-center px-3 about sm:flex-row lg:gap-0 sm:gap-12 lg:px-8 sm:px-5"
       >
         <!-- Animated Rotating Line Container -->
         <div
@@ -268,14 +269,14 @@
         <div
           class="absolute left-5 sm:left-10 mobile-m:left-6 mobile-l:left-8 lg:left-20 xl:left-28 lg:top-40 sm:top-36 top-[9.5rem] mobile-m:top-44 mobile-l:top-48 -translate-y-1/2 lg:w-64 sm:w-56 w-10/12 aspect-square bg-gradient-to-br from-[#0077C0] via-[#0077C0] to-[#C7EEFF] rounded-full z-[-1]"
         ></div>
-        <div class="sm:w-2/5 w-full py-8">
+        <div class="w-full py-8 sm:w-2/5">
           <img
-            src="./assets/images/IMG_20241022_152417-removebg-preview.png"
+            src="/assets/images/IMG_20241022_152417-removebg-preview.png"
             alt="Iza"
             class="sm:w-72 w-full mx-auto relative z-10 drop-shadow-[0_0_12px_rgba(0,0,0,1)] hover:scale-105 transition hover:-translate-y-1"
           />
         </div>
-        <div class="sm:w-3/5 w-full">
+        <div class="w-full sm:w-3/5">
           <div class="flex justify-between mb-3">
             <h1
               class="text-left lg:text-4xl text-3xl font-bold tracking-wide bg-gradient-to-b from-[#0077C0] via-[#0077C0] to-[#C7EEFF] bg-clip-text text-transparent"
@@ -284,7 +285,7 @@
             </h1>
           </div>
           <div
-            class="tracking-wide font-light leading-relaxed sm:text-sm lg:text-base"
+            class="font-light leading-relaxed tracking-wide text-justify sm:text-sm lg:text-base"
           >
             <p>
               Hi, my name is
@@ -297,8 +298,8 @@
                 class="font-medium underline"
                 href="https://smkamaliah.sch.id/"
               >
-                Amaliah Ciawi Vocational School
-              </a>
+                Amaliah Ciawi Vocational School</a
+              >
               with a Software and Game Development Major.
             </p>
             <br />
@@ -314,7 +315,7 @@
               <!-- Skill Button -->
               <button
                 @click="open = !open"
-                class="px-3 rounded text-center lg:text-base text-sm filter hover:brightness-75 transition"
+                class="px-3 text-sm text-center transition rounded lg:text-base filter hover:brightness-75"
                 style="background-color: #ff2d20; color: #000"
               >
                 Laravel
@@ -324,7 +325,7 @@
               <!-- Skill Button -->
               <button
                 @click="open = !open"
-                class="px-3 rounded text-center lg:text-base text-sm filter hover:brightness-75 transition"
+                class="px-3 text-sm text-center transition rounded lg:text-base filter hover:brightness-75"
                 style="background-color: #06b6d4; color: #fff"
               >
                 Tailwind CSS
@@ -334,7 +335,7 @@
               <!-- Skill Button -->
               <button
                 @click="open = !open"
-                class="px-3 rounded text-center lg:text-base text-sm filter hover:brightness-75 transition"
+                class="px-3 text-sm text-center transition rounded lg:text-base filter hover:brightness-75"
                 style="background-color: #61dafb; color: #fff"
               >
                 React
@@ -344,7 +345,7 @@
         </div>
       </div>
       <div
-        class="others relative flex sm:flex-row flex-col items-center sm:px-8 px-5 sm:gap-5 gap-3 sm:mt-5 mt-9"
+        class="relative flex flex-col items-center gap-3 px-5 others sm:flex-row sm:px-8 sm:gap-5 sm:mt-5 mt-9"
       >
         <div
           class="w-full border border-[#C7EEFF] sm:aspect-2/1 max-sm:min-h-32 rounded-lg flex flex-col justify-center items-center p-2 relative overflow-hidden"
@@ -355,22 +356,22 @@
           ></div>
 
           <!-- Web Elements -->
-          <div class="absolute inset-0 opacity-10 pointer-events-none">
+          <div class="absolute inset-0 pointer-events-none opacity-10">
             <div
-              class="absolute top-4 left-4 w-16 h-16 bg-blue-200 rounded-full"
+              class="absolute w-16 h-16 bg-blue-200 rounded-full top-4 left-4"
             ></div>
             <div
-              class="absolute bottom-4 right-4 w-24 h-24 bg-blue-300 rounded-full"
+              class="absolute w-24 h-24 bg-blue-300 rounded-full bottom-4 right-4"
             ></div>
           </div>
-          <h2 class="lg:text-lg text-xl sm:text-sm font-bold mb-3">
+          <h2 class="mb-3 text-xl font-bold lg:text-lg sm:text-sm">
             Social Media
           </h2>
-          <div class="flex space-x-5 sm:space-x-3 lg:space-x-4 justify-center">
+          <div class="flex justify-center space-x-5 sm:space-x-3 lg:space-x-4">
             <a
               href="https://wa.me/6289670336495"
               target="_blank"
-              class="lg:w-7 lg:h-7 hover:rotate-12 transition hover:scale-105 sm:w-5 sm:h-5 mobile-m:w-10 mobile-m:h-10 w-8 h-8"
+              class="w-8 h-8 transition lg:w-7 lg:h-7 hover:rotate-12 hover:scale-105 sm:w-5 sm:h-5 mobile-m:w-10 mobile-m:h-10"
             >
               <svg
                 role="img"
@@ -387,7 +388,7 @@
             <a
               href="https://github.com/alfreezzz"
               target="_blank"
-              class="lg:w-7 lg:h-7 hover:rotate-12 transition hover:scale-105 sm:w-5 sm:h-5 mobile-m:w-10 mobile-m:h-10 w-8 h-8"
+              class="w-8 h-8 transition lg:w-7 lg:h-7 hover:rotate-12 hover:scale-105 sm:w-5 sm:h-5 mobile-m:w-10 mobile-m:h-10"
             >
               <svg
                 role="img"
@@ -404,7 +405,7 @@
             <a
               href="https://www.linkedin.com/in/alfriza-akhmad-rahadi-a22896343/"
               target="_blank"
-              class="lg:w-7 lg:h-7 hover:rotate-12 transition hover:scale-105 sm:w-5 sm:h-5 mobile-m:w-10 mobile-m:h-10 w-8 h-8"
+              class="w-8 h-8 transition lg:w-7 lg:h-7 hover:rotate-12 hover:scale-105 sm:w-5 sm:h-5 mobile-m:w-10 mobile-m:h-10"
             >
               <svg
                 role="img"
@@ -421,7 +422,7 @@
             <a
               href="https://www.instagram.com/alfreezzz_/"
               target="_blank"
-              class="lg:w-7 lg:h-7 hover:rotate-12 transition hover:scale-105 sm:w-5 sm:h-5 mobile-m:w-10 mobile-m:h-10 w-8 h-8"
+              class="w-8 h-8 transition lg:w-7 lg:h-7 hover:rotate-12 hover:scale-105 sm:w-5 sm:h-5 mobile-m:w-10 mobile-m:h-10"
             >
               <svg
                 role="img"
@@ -441,17 +442,17 @@
         <div
           class="hobbies w-full border border-[#C7EEFF] sm:aspect-2/1 max-sm:min-h-32 rounded-lg flex flex-col justify-center items-center p-2"
         >
-          <h2 class="lg:text-lg text-xl sm:text-sm font-bold mb-1">
-            <div class="relative inline-block px-3 text-white font-bold">
+          <h2 class="mb-1 text-xl font-bold lg:text-lg sm:text-sm">
+            <div class="relative inline-block px-3 font-bold text-white">
               <span
                 class="absolute inset-0 -skew-x-12 bg-gradient-to-tr from-red-700 via-red-600 to-red-500"
               ></span>
               <span class="relative italic">Hobbies</span>
             </div>
           </h2>
-          <div class="flex gap-8 w-full justify-center">
+          <div class="flex justify-center w-full gap-8">
             <svg
-              class="lg:w-12 lg:h-12 w-16 h-16 sm:w-8 sm:h-8 transition-all hover:animate-bounce"
+              class="w-16 h-16 transition-all lg:w-12 lg:h-12 sm:w-8 sm:h-8 hover:animate-bounce"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 -960 960 960"
               fill="#9D00FF"
@@ -461,7 +462,7 @@
               />
             </svg>
             <svg
-              class="lg:w-12 lg:h-12 w-16 h-16 sm:w-8 sm:h-8 transition-all hover:animate-pulse"
+              class="w-16 h-16 transition-all lg:w-12 lg:h-12 sm:w-8 sm:h-8 hover:animate-pulse"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 -960 960 960"
               fill="#40E0D0"
@@ -481,7 +482,7 @@
           class="w-full border border-[#C7EEFF] sm:aspect-2/1 max-sm:min-h-32 rounded-lg flex flex-col justify-center items-center p-2 relative overflow-hidden bg-[#18171777]"
         >
           <svg
-            class="absolute opacity-10 -right-4 -bottom-4 w-48 h-48 text-purple-200"
+            class="absolute w-48 h-48 text-purple-200 opacity-10 -right-4 -bottom-4"
             fill="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -494,7 +495,7 @@
             Repository
           </h2>
           <div
-            class="flex items-center space-x-1 group transition-transform duration-300"
+            class="flex items-center space-x-1 transition-transform duration-300 group"
           >
             <svg
               class="sm:w-6 sm:h-6 lg:h-10 lg:w-10 h-12 w-12 text-purple-600 transform transition-transform duration-300 group-hover:scale-110 group-hover:-translate-x-0.5"
@@ -520,7 +521,7 @@
               class="animate-blink border border-purple-800 h-8 sm:h-4 lg:h-6 mt-1.5 sm:mt-0.5 lg:mt-1 transition-transform duration-300 group-hover:scale-110 group-hover:translate-x-0.5"
             ></span>
           </div>
-          <span class="text-sm sm:text-xs lg:text-sm text-gray-600"
+          <span class="text-sm text-gray-600 sm:text-xs lg:text-sm"
             >Total Public Repos</span
           >
         </div>
@@ -529,7 +530,7 @@
           class="cv w-full border border-[#C7EEFF] sm:aspect-2/1 max-sm:min-h-32 rounded-lg flex flex-col justify-center items-center p-2"
         >
           <a
-            href="./assets/files/CV Alfriza Akhmad Rahadi.pdf"
+            href="/assets/files/CV Alfriza Akhmad Rahadi.pdf"
             download
             class="cursor-pointer group/download relative flex gap-1 px-8 sm:px-4 lg:text-base lg:px-6 sm:text-xs items-center py-4 sm:py-2 bg-[#5c5fe9] text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 font-semibold shadow-xl active:shadow-inner transition-all duration-300"
           >
@@ -537,7 +538,7 @@
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="h-6 w-6 sm:h-4 sm:w-4 lg:h-5 lg:w-5"
+              class="w-6 h-6 sm:h-4 sm:w-4 lg:h-5 lg:w-5"
             >
               <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
               <g
@@ -579,7 +580,7 @@
         -- Experience --
       </h1>
       <h2
-        class="font-extralight text-center tracking-wider lg:text-base mobile-m:text-sm text-xs italic max-lg:-mt-3 mb-5"
+        class="mb-5 text-xs italic tracking-wider text-center font-extralight lg:text-base mobile-m:text-sm max-lg:-mt-3"
       >
         <span class="font-medium">Internships</span>,
         <span class="font-medium">freelance work</span>, and
@@ -595,8 +596,8 @@
         style="transform: translateX(-50%); z-index: 2"
       ></div>
 
-      <div id="experiences-container" class="space-y-16 lg:mt-12 mt-8 mb-4">
-        <div class="flex relative">
+      <div id="experiences-container" class="mt-8 mb-4 space-y-16 lg:mt-12">
+        <div class="relative flex">
           <div class="flex">
             <div
               class="max-sm:hidden font-light tracking-widest lg:w-36 w-[6.5rem] lg:text-base text-sm"
@@ -606,19 +607,19 @@
           </div>
           <div class="flex flex-col items-center opacity-0">
             <!-- Hidden placeholder -->
-            <div class="sm:w-5 sm:h-5 w-4 h-4 rounded-full"></div>
+            <div class="w-4 h-4 rounded-full sm:w-5 sm:h-5"></div>
           </div>
-          <div class="lg:ml-10 sm:ml-5 ml-1">
-            <div class="sm:hidden font-light tracking-widest text-xs">
+          <div class="ml-1 lg:ml-10 sm:ml-5">
+            <div class="text-xs font-light tracking-widest sm:hidden">
               2024 October - Now
             </div>
             <h2
-              class="lg:text-lg text-base sm:font-bold font-semibold tracking-wide lg:mb-5 mb-3"
+              class="mb-3 text-base font-semibold tracking-wide lg:text-lg sm:font-bold lg:mb-5"
             >
               SMK Amaliah 1&amp;2 Ciawi Bogor - Back-End Developer
             </h2>
             <p
-              class="leading-normal tracking-wider font-light text-justify lg:text-base text-sm"
+              class="text-sm font-light leading-normal tracking-wider text-justify lg:text-base"
             >
               As a back-end developer for AM Agenda Pembelajaran Harian, I was
               responsible for designing and implementing the system architecture
@@ -636,7 +637,7 @@
 
     <div
       id="project"
-      class="scroll-section mt-32 xl:px-32 px-3 sm:px-5 mx-auto"
+      class="px-3 mx-auto mt-32 scroll-section xl:px-32 sm:px-5"
     >
       <h1
         class="text-center lg:text-5xl mobile-m:text-4xl text-3xl font-bold tracking-wide lg:py-3 pb-5 sm:pb-4 bg-gradient-to-b from-[#0077C0] via-[#0077C0] to-[#C7EEFF] bg-clip-text text-transparent"
@@ -644,31 +645,35 @@
         -- Project --
       </h1>
       <h2
-        class="font-extralight text-center tracking-wider lg:text-base mobile-m:text-sm text-xs italic max-lg:-mt-3 mb-5"
+        class="mb-5 text-xs italic tracking-wider text-center font-extralight lg:text-base mobile-m:text-sm max-lg:-mt-3"
       >
         Some collection of the
         <span class="font-semibold">projects</span> I've
         <span class="font-semibold">made</span>.
       </h2>
 
-      <div class="flex flex-col lg:gap-16 gap-20 mt-5 mx-auto">
+      <div class="flex flex-col gap-20 mx-auto mt-5 lg:gap-16">
         <div>
-          <div class="flex max-lg:flex-col justify-between items-start">
-            <a href="./not-found" class="lg:w-1/3 w-full" target="_blank">
+          <div class="flex items-start justify-between max-lg:flex-col">
+            <a href="/not-found.html" class="w-full lg:w-1/3" target="_blank">
               <img
-                src="./assets/images/Restaurant Reservation.jpg"
+                src="/assets/images/Restaurant Reservation.jpg"
                 alt="Project"
                 class="object-cover w-full h-auto rounded-lg hover:border-2 border-[#0077C0] transition"
               />
             </a>
-            <div class="lg:w-2/3 w-full lg:ml-6">
+            <div class="w-full lg:w-2/3 lg:ml-6">
               <div class="flex items-center justify-between mb-2 max-lg:mt-3">
-                <a href="./not-found" class="hover:underline" target="_blank">
-                  <h2 class="sm:text-2xl text-lg font-semibold lg:mr-6 mr-4">
+                <a
+                  href="/not-found.html"
+                  class="hover:underline"
+                  target="_blank"
+                >
+                  <h2 class="mr-4 text-lg font-semibold sm:text-2xl lg:mr-6">
                     Restaurant Reservation
                   </h2>
                 </a>
-                <h3 class="sm:text-lg text-gray-400 text-right">2024-06-07</h3>
+                <h3 class="text-right text-gray-400 sm:text-lg">2024-06-07</h3>
               </div>
               <a
                 href=".?jenis_apk=Web+app#project"
@@ -681,12 +686,12 @@
                   Alam Sunda reservation website, made for table reservations
                   and ordering food online.
                 </span>
-                <span class="full-description hidden">
+                <span class="hidden full-description">
                   Alam Sunda reservation website, made for table reservations
                   and ordering food online.
                 </span>
               </p>
-              <div class="lg:mt-7 mt-5 flex justify-between items-center">
+              <div class="flex items-center justify-between mt-5 lg:mt-7">
                 <div
                   class="grid grid-cols-5 mobile-m:grid-cols-6 mobile-l:grid-cols-7 sm:grid-cols-12"
                 >
@@ -695,7 +700,7 @@
                   >
                     <svg
                       role="img"
-                      class="sm:w-5 sm:h-5 h-4 w-4"
+                      class="w-4 h-4 sm:w-5 sm:h-5"
                       fill="#777BB4"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -711,7 +716,7 @@
                   >
                     <svg
                       role="img"
-                      class="sm:w-5 sm:h-5 h-4 w-4"
+                      class="w-4 h-4 sm:w-5 sm:h-5"
                       fill="#1572B6"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -727,7 +732,7 @@
                   >
                     <svg
                       role="img"
-                      class="sm:w-5 sm:h-5 h-4 w-4"
+                      class="w-4 h-4 sm:w-5 sm:h-5"
                       fill="#F7DF1E"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -740,7 +745,7 @@
                   </div>
                 </div>
                 <a
-                  href="./not-found"
+                  href="/not-found.html"
                   class="sm:text-lg text-sm mobile-m:text-base underline hover:no-underline decoration-2 decoration-solid decoration-[#0077C0] underline-offset-8 font-medium text-[#0077C0] hover:border-2 border-[#0077C0] sm:px-4 px-2 py-1 rounded-md hover:text-[#C7EEFF] transition"
                   target="_blank"
                 >
@@ -751,30 +756,30 @@
           </div>
         </div>
         <div>
-          <div class="flex max-lg:flex-col justify-between items-start">
+          <div class="flex items-start justify-between max-lg:flex-col">
             <a
               href="https://www.figma.com/design/FjOuIRPRoaJe8Id7DoIrBK/devOps?node-id=0-1&amp;t=NXhOXIDU4QutVG8d-0"
-              class="lg:w-1/3 w-full"
+              class="w-full lg:w-1/3"
               target="_blank"
             >
               <img
-                src="./assets/images/E-Store.png"
+                src="/assets/images/E-Store.png"
                 alt="Project"
                 class="object-cover w-full h-auto rounded-lg hover:border-2 border-[#0077C0] transition"
               />
             </a>
-            <div class="lg:w-2/3 w-full lg:ml-6">
+            <div class="w-full lg:w-2/3 lg:ml-6">
               <div class="flex items-center justify-between mb-2 max-lg:mt-3">
                 <a
                   href="https://www.figma.com/design/FjOuIRPRoaJe8Id7DoIrBK/devOps?node-id=0-1&amp;t=NXhOXIDU4QutVG8d-0"
                   class="hover:underline"
                   target="_blank"
                 >
-                  <h2 class="sm:text-2xl text-lg font-semibold lg:mr-6 mr-4">
+                  <h2 class="mr-4 text-lg font-semibold sm:text-2xl lg:mr-6">
                     E-Store
                   </h2>
                 </a>
-                <h3 class="sm:text-lg text-gray-400 text-right">2024-07-11</h3>
+                <h3 class="text-right text-gray-400 sm:text-lg">2024-07-11</h3>
               </div>
               <a
                 href=".?jenis_apk=UI%2FUX#project"
@@ -786,11 +791,11 @@
                 <span class="short-description">
                   UI/UX design for E-Commerce web interface.
                 </span>
-                <span class="full-description hidden">
+                <span class="hidden full-description">
                   UI/UX design for E-Commerce web interface.
                 </span>
               </p>
-              <div class="lg:mt-7 mt-5 flex justify-between items-center">
+              <div class="flex items-center justify-between mt-5 lg:mt-7">
                 <div
                   class="grid grid-cols-5 mobile-m:grid-cols-6 mobile-l:grid-cols-7 sm:grid-cols-12"
                 >
@@ -799,7 +804,7 @@
                   >
                     <svg
                       role="img"
-                      class="sm:w-5 sm:h-5 h-4 w-4"
+                      class="w-4 h-4 sm:w-5 sm:h-5"
                       fill="#F24E1E"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -823,30 +828,30 @@
           </div>
         </div>
         <div>
-          <div class="flex max-lg:flex-col justify-between items-start">
+          <div class="flex items-start justify-between max-lg:flex-col">
             <a
               href="https://github.com/alfreezzz/AM1_AGENDA"
-              class="lg:w-1/3 w-full"
+              class="w-full lg:w-1/3"
               target="_blank"
             >
               <img
-                src="./assets/images/AM Agenda Pembelajaran Harian.png"
+                src="/assets/images/AM Agenda Pembelajaran Harian.png"
                 alt="Project"
                 class="object-cover w-full h-auto rounded-lg hover:border-2 border-[#0077C0] transition"
               />
             </a>
-            <div class="lg:w-2/3 w-full lg:ml-6">
+            <div class="w-full lg:w-2/3 lg:ml-6">
               <div class="flex items-center justify-between mb-2 max-lg:mt-3">
                 <a
                   href="https://github.com/alfreezzz/AM1_AGENDA"
                   class="hover:underline"
                   target="_blank"
                 >
-                  <h2 class="sm:text-2xl text-lg font-semibold lg:mr-6 mr-4">
+                  <h2 class="mr-4 text-lg font-semibold sm:text-2xl lg:mr-6">
                     AM Agenda Pembelajaran Harian
                   </h2>
                 </a>
-                <h3 class="sm:text-lg text-gray-400 text-right">2024-11-26</h3>
+                <h3 class="text-right text-gray-400 sm:text-lg">2024-11-26</h3>
               </div>
               <a
                 href=".?jenis_apk=Web+app#project"
@@ -860,7 +865,7 @@
                   for Amaliah Ciawi Vocational School's teachers and students to
                   m...
                 </span>
-                <span class="full-description hidden">
+                <span class="hidden full-description">
                   AM Agenda Pembelajaran Harian, was created to make it easier
                   for Amaliah Ciawi Vocational School's teachers and students to
                   manage attendance.
@@ -873,7 +878,7 @@
                   Read More
                 </a>
               </p>
-              <div class="lg:mt-7 mt-5 flex justify-between items-center">
+              <div class="flex items-center justify-between mt-5 lg:mt-7">
                 <div
                   class="grid grid-cols-5 mobile-m:grid-cols-6 mobile-l:grid-cols-7 sm:grid-cols-12"
                 >
@@ -882,7 +887,7 @@
                   >
                     <svg
                       role="img"
-                      class="sm:w-5 sm:h-5 h-4 w-4"
+                      class="w-4 h-4 sm:w-5 sm:h-5"
                       fill="#FF2D20"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -898,7 +903,7 @@
                   >
                     <svg
                       role="img"
-                      class="sm:w-5 sm:h-5 h-4 w-4"
+                      class="w-4 h-4 sm:w-5 sm:h-5"
                       fill="#06B6D4"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -914,7 +919,7 @@
                   >
                     <svg
                       role="img"
-                      class="sm:w-5 sm:h-5 h-4 w-4"
+                      class="w-4 h-4 sm:w-5 sm:h-5"
                       fill="#8BC0D0"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -938,30 +943,30 @@
           </div>
         </div>
         <div>
-          <div class="flex max-lg:flex-col justify-between items-start">
+          <div class="flex items-start justify-between max-lg:flex-col">
             <a
               href="https://alfreezzz.github.io/outbound-react-and-tailwind-css/"
-              class="lg:w-1/3 w-full"
+              class="w-full lg:w-1/3"
               target="_blank"
             >
               <img
-                src="./assets/images/Wanna Outbond.png"
+                src="/assets/images/Wanna Outbond.png"
                 alt="Project"
                 class="object-cover w-full h-auto rounded-lg hover:border-2 border-[#0077C0] transition"
               />
             </a>
-            <div class="lg:w-2/3 w-full lg:ml-6">
+            <div class="w-full lg:w-2/3 lg:ml-6">
               <div class="flex items-center justify-between mb-2 max-lg:mt-3">
                 <a
                   href="https://alfreezzz.github.io/outbound-react-and-tailwind-css/"
                   class="hover:underline"
                   target="_blank"
                 >
-                  <h2 class="sm:text-2xl text-lg font-semibold lg:mr-6 mr-4">
+                  <h2 class="mr-4 text-lg font-semibold sm:text-2xl lg:mr-6">
                     Wanna Outbond
                   </h2>
                 </a>
-                <h3 class="sm:text-lg text-gray-400 text-right">2025-04-21</h3>
+                <h3 class="text-right text-gray-400 sm:text-lg">2025-04-21</h3>
               </div>
               <a
                 href=".?jenis_apk=Web+app#project"
@@ -974,12 +979,12 @@
                   Outbound website, made for information about activities,
                   packages, and promotions.
                 </span>
-                <span class="full-description hidden">
+                <span class="hidden full-description">
                   Outbound website, made for information about activities,
                   packages, and promotions.
                 </span>
               </p>
-              <div class="lg:mt-7 mt-5 flex justify-between items-center">
+              <div class="flex items-center justify-between mt-5 lg:mt-7">
                 <div
                   class="grid grid-cols-5 mobile-m:grid-cols-6 mobile-l:grid-cols-7 sm:grid-cols-12"
                 >
@@ -988,7 +993,7 @@
                   >
                     <svg
                       role="img"
-                      class="sm:w-5 sm:h-5 h-4 w-4"
+                      class="w-4 h-4 sm:w-5 sm:h-5"
                       fill="#61DAFB"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1004,7 +1009,7 @@
                   >
                     <svg
                       role="img"
-                      class="sm:w-5 sm:h-5 h-4 w-4"
+                      class="w-4 h-4 sm:w-5 sm:h-5"
                       fill="#06B6D4"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1020,7 +1025,7 @@
                   >
                     <svg
                       role="img"
-                      class="sm:w-5 sm:h-5 h-4 w-4"
+                      class="w-4 h-4 sm:w-5 sm:h-5"
                       fill="#1572B6"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1046,21 +1051,21 @@
       </div>
     </div>
 
-    <div id="blog" class="scroll-section mt-32 xl:px-32 px-3 sm:px-5">
+    <div id="blog" class="px-3 mt-32 scroll-section xl:px-32 sm:px-5">
       <h1
         class="text-center lg:text-5xl mobile-m:text-4xl text-3xl font-bold tracking-wide lg:py-3 pb-5 sm:pb-4 bg-gradient-to-b from-[#0077C0] via-[#0077C0] to-[#C7EEFF] bg-clip-text text-transparent"
       >
         -- Blog --
       </h1>
       <h2
-        class="font-extralight text-center tracking-wider lg:text-base mobile-m:text-sm text-xs italic max-lg:-mt-3 mb-5"
+        class="mb-5 text-xs italic tracking-wider text-center font-extralight lg:text-base mobile-m:text-sm max-lg:-mt-3"
       >
         Some random
         <span class="font-medium">thoughts</span> and
         <span class="font-medium">ideas</span>.
       </h2>
       <div
-        class="grid lg:grid-cols-3 sm:grid-cols-2 sm:gap-5 gap-3 max-sm:mt-5 pt-5 mx-auto"
+        class="grid gap-3 pt-5 mx-auto lg:grid-cols-3 sm:grid-cols-2 sm:gap-5 max-sm:mt-5"
       >
         <div
           class="card flex flex-col sm:border border-[#C7EEFF] sm:p-4 text-left rounded-md lg:pb-12 pb-8"
@@ -1068,18 +1073,18 @@
           <div
             class="w-full max-sm:hidden relative mb-4 overflow-hidden rounded sm:h-[200px] h-[250px]"
           >
-            <a href="./an-unforgettable-anime-event-experience">
+            <a href="/an-unforgettable-anime-event-experience.html">
               <img
-                src="./assets/images/An Unforgettable Anime Event Experience.jpg"
+                src="/assets/images/An Unforgettable Anime Event Experience.jpg"
                 alt="Article"
                 class="w-full h-full object-cover hover:border-2 border-[#0077C0] transition duration-200"
               />
             </a>
           </div>
-          <div class="text-left flex-grow text-sm leading-normal">
-            <a href="./an-unforgettable-anime-event-experience">
+          <div class="flex-grow text-sm leading-normal text-left">
+            <a href="/an-unforgettable-anime-event-experience.html">
               <h3
-                class="sm:text-lg text-base font-semibold tracking-wider hover:underline leading-tight mb-2"
+                class="mb-2 text-base font-semibold leading-tight tracking-wider text-justify sm:text-lg hover:underline"
               >
                 An Unforgettable Anime Event Experience
               </h3>
@@ -1117,7 +1122,7 @@
             }"
               class="mb-4"
             >
-              <p class="font-extralight text-sm">
+              <p class="text-sm font-extralight">
                 <span x-text="getTimeAgo()"></span> •
                 <a
                   href=".?jenis_artikel=Personal+Blog#blog"
@@ -1128,22 +1133,22 @@
               </p>
             </div>
 
-            <a href="./an-unforgettable-anime-event-experience">
-              <p class="hover:underline text-sm leading-relaxed">
+            <a href="/an-unforgettable-anime-event-experience.html">
+              <p class="text-sm leading-relaxed text-justify hover:underline">
                 Attending an anime event has always been on my bucket list, and
                 recently, I finally got the chance to experience one. From the
                 moment I stepped into t...
               </p>
             </a>
           </div>
-          <hr class="sm:hidden mt-5" />
+          <hr class="mt-5 sm:hidden" />
         </div>
       </div>
     </div>
 
     <div
       id="contact"
-      class="scroll-section mt-32 xl:px-32 lg:px-5 px-3 sm:px-5"
+      class="px-3 mt-32 scroll-section xl:px-32 lg:px-5 sm:px-5"
     >
       <h1
         class="text-center lg:text-5xl mobile-m:text-4xl text-3xl font-bold tracking-wide lg:py-3 pb-5 sm:pb-4 bg-gradient-to-b from-[#0077C0] via-[#0077C0] to-[#C7EEFF] bg-clip-text text-transparent"
@@ -1151,18 +1156,18 @@
         -- Contact --
       </h1>
       <h2
-        class="font-extralight text-center tracking-wider lg:text-base mobile-m:text-sm text-xs italic max-lg:-mt-3 mb-5"
+        class="mb-5 text-xs italic tracking-wider text-center font-extralight lg:text-base mobile-m:text-sm max-lg:-mt-3"
       >
         Feel free to
         <span class="font-semibold">reach out</span> and
         <span class="font-semibold">get in touch</span>.
       </h2>
-      <div class="flex max-lg:flex-col items-center gap-16 lg:mt-10 mt-5">
+      <div class="flex items-center gap-16 mt-5 max-lg:flex-col lg:mt-10">
         <div
           class="border border-[#C7EEFF] rounded-xl lg:p-6 sm:p-9 p-6 lg:w-[50%] w-full shadow-behind shadow-gray"
         >
           <h2
-            class="text-xl sm:text-3xl lg:text-2xl font-bold text-center mb-2 sm:mb-5 lg:mb-3 underline"
+            class="mb-2 text-xl font-bold text-center underline sm:text-3xl lg:text-2xl sm:mb-5 lg:mb-3"
           >
             Contact Form
           </h2>
@@ -1213,7 +1218,7 @@
             method="POST"
           >
             <div class="mb-4">
-              <label for="name" class="font-medium block mb-1">Name</label>
+              <label for="name" class="block mb-1 font-medium">Name</label>
               <input
                 type="text"
                 id="name"
@@ -1224,12 +1229,12 @@
                 class="border border-[#c7eeff2f] bg-black w-full rounded-md px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-[#0077C0]"
               />
               <template x-if="errors.name">
-                <span class="text-red-500 text-sm" x-text="errors.name"></span>
+                <span class="text-sm text-red-500" x-text="errors.name"></span>
               </template>
             </div>
 
             <div class="mb-4">
-              <label for="email" class="font-medium block mb-1">Email</label>
+              <label for="email" class="block mb-1 font-medium">Email</label>
               <input
                 type="email"
                 id="email"
@@ -1240,12 +1245,12 @@
                 class="border border-[#c7eeff2f] bg-black w-full rounded-md px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-[#0077C0]"
               />
               <template x-if="errors.email">
-                <span class="text-red-500 text-sm" x-text="errors.email"></span>
+                <span class="text-sm text-red-500" x-text="errors.email"></span>
               </template>
             </div>
 
             <div class="mb-4">
-              <label for="message" class="font-medium block mb-1"
+              <label for="message" class="block mb-1 font-medium"
                 >Message</label
               >
               <textarea
@@ -1258,7 +1263,7 @@
               ></textarea>
               <template x-if="errors.message">
                 <span
-                  class="text-red-500 text-sm"
+                  class="text-sm text-red-500"
                   x-text="errors.message"
                 ></span>
               </template>
@@ -1275,7 +1280,7 @@
               >
               </span>
               <span
-                class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2"
+                class="inline-flex items-center justify-center w-full h-full gap-2 text-sm font-medium text-white rounded-lg cursor-pointer bg-slate-950 px-7 backdrop-blur-3xl"
               >
                 Send your message
                 <svg
@@ -1295,15 +1300,15 @@
             </button>
           </form>
 
-          <p class="text-center text-sm mt-10 tracking-wider font-light">
+          <p class="mt-10 text-sm font-light tracking-wider text-center">
             Or send me mail by
             <a
               href="mailto:roshinante678@gmail.com"
-              class="inline-flex group items-center justify-center underline text-gray-300 hover:text-gray-400 transition font-bold"
+              class="inline-flex items-center justify-center font-bold text-gray-300 underline transition group hover:text-gray-400"
             >
               <span>mailto: instead</span>
               <svg
-                class="w-4 h-4 lg:w-5 lg:h-5 ml-2 rotate-12 group-hover:animate-bounce transition-transform duration-300 ease-in-out"
+                class="w-4 h-4 ml-2 transition-transform duration-300 ease-in-out lg:w-5 lg:h-5 rotate-12 group-hover:animate-bounce"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 -960 960 960"
                 fill="#C7EEFF"
@@ -1337,18 +1342,18 @@
             </a>
             <div class="leading-normal">
               <h3
-                class="font-bold lg:text-2xl sm:text-xl text-base tracking-wide"
+                class="text-base font-bold tracking-wide lg:text-2xl sm:text-xl"
               >
                 Chat with me on WhatsApp
               </h3>
               <p
-                class="tracking-wide font-extralight sm:text-base text-sm max-sm:my-1"
+                class="text-sm tracking-wide font-extralight sm:text-base max-sm:my-1"
               >
                 Feel free to drop a message or discuss your ideas directly.
               </p>
               <a
                 href="https://wa.me/6289670336495"
-                class="font-medium tracking-wider inline-flex group items-center justify-center transition"
+                class="inline-flex items-center justify-center font-medium tracking-wider transition group"
                 target="_blank"
               >
                 <span
@@ -1390,18 +1395,18 @@
             </a>
             <div class="leading-normal">
               <h3
-                class="font-bold lg:text-2xl sm:text-xl text-base tracking-wide"
+                class="text-base font-bold tracking-wide lg:text-2xl sm:text-xl"
               >
                 Discover my GitHub projects
               </h3>
               <p
-                class="tracking-wide font-extralight sm:text-base text-sm max-sm:my-1"
+                class="text-sm tracking-wide font-extralight sm:text-base max-sm:my-1"
               >
                 Explore my repositories and see what I've been working on.
               </p>
               <a
                 href="https://github.com/alfreezzz"
-                class="font-medium tracking-wider inline-flex group items-center justify-center transition"
+                class="inline-flex items-center justify-center font-medium tracking-wider transition group"
                 target="_blank"
               >
                 <span
@@ -1443,18 +1448,18 @@
             </a>
             <div class="leading-normal">
               <h3
-                class="font-bold lg:text-2xl sm:text-xl text-base tracking-wide"
+                class="text-base font-bold tracking-wide lg:text-2xl sm:text-xl"
               >
                 Connect with me on LinkedIn
               </h3>
               <p
-                class="tracking-wide font-extralight sm:text-base text-sm max-sm:my-1"
+                class="text-sm tracking-wide font-extralight sm:text-base max-sm:my-1"
               >
                 Let's collaborate and grow our professional network together.
               </p>
               <a
                 href="https://www.linkedin.com/in/alfriza-akhmad-rahadi-a22896343/"
-                class="font-medium tracking-wider inline-flex group items-center justify-center transition"
+                class="inline-flex items-center justify-center font-medium tracking-wider transition group"
                 target="_blank"
               >
                 <span
@@ -1496,18 +1501,18 @@
             </a>
             <div class="leading-normal">
               <h3
-                class="font-bold lg:text-2xl sm:text-xl text-base tracking-wide"
+                class="text-base font-bold tracking-wide lg:text-2xl sm:text-xl"
               >
                 Or follow me on Instagram
               </h3>
               <p
-                class="tracking-wide font-extralight sm:text-base text-sm max-sm:my-1"
+                class="text-sm tracking-wide font-extralight sm:text-base max-sm:my-1"
               >
                 Stay connected and see more of my journey.
               </p>
               <a
                 href="https://www.instagram.com/alfreezzz_/"
-                class="font-medium tracking-wider inline-flex group items-center justify-center transition"
+                class="inline-flex items-center justify-center font-medium tracking-wider transition group"
                 target="_blank"
               >
                 <span
@@ -1535,8 +1540,8 @@
     <footer
       class="container max-w-none py-6 mx-auto text-center border xl:rounded-t-full rounded-t-3xl border-[#0077C0] lg:mt-32 mt-20"
     >
-      <p class="sm:text-sm text-xs tracking-wider font-sans">
-        Made with ❤ by
+      <p class="font-sans text-xs tracking-wider sm:text-sm">
+        Made with ❤️ by
         <a
           href="https://www.instagram.com/alfreezzz_/"
           target="_blank"
@@ -1554,11 +1559,11 @@
       </p>
       <span
         x-data="{ year: new Date().getFullYear() }"
-        class="mobile-m:hidden text-sm"
+        class="text-sm mobile-m:hidden"
       >
         &copy;<span x-text="year"></span>
       </span>
     </footer>
   </body>
-  <script src="./assets/js/script.js"></script>
+  <script src="/assets/js/script.js"></script>
 </html>

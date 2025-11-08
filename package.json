@@ -1,11 +1,28 @@
 {
-  "devDependencies": {
-    "tailwindcss": "^3.4.17",
-    "vite": "^6.3.3"
-  },
+  "name": "iza-app",
+  "version": "1.0.0",
+  "description": "Alfriza's personal website",
+  "main": "index.html",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve": "npx serve .",
+    "deploy": "vercel --prod",
+    "deploy:preview": "vercel"
+  },
+  "keywords": [
+    "personal-website",
+    "portfolio",
+    "static-site",
+    "tailwindcss",
+    "alpinejs"
+  ],
+  "author": "Alfriza Akhmad Rahadi",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.3.3",
+    "vercel": "^32.3.1"
   }
 }
