@@ -212,71 +212,75 @@
       <div
         class="relative flex flex-col items-center px-3 about sm:flex-row lg:gap-0 sm:gap-12 lg:px-8 sm:px-5"
       >
-        <!-- Animated Rotating Line Container -->
-        <div
-          class="absolute left-5 sm:left-10 mobile-m:left-6 mobile-l:left-8 lg:left-20 xl:left-28 lg:top-40 sm:top-36 top-[9.5rem] mobile-m:top-44 mobile-l:top-48 -translate-y-1/2 lg:w-64 sm:w-56 w-10/12 aspect-square"
-        >
-          <!-- Rotating SVG Line -->
-          <svg
-            viewBox="0 0 220 220"
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%+40px)] h-[calc(100%+40px)] z-[-2]"
+        <!-- Image Container with Centered Circle -->
+        <div class="relative w-full py-8 sm:w-2/5">
+          <!-- Animated Rotating Line Container -->
+          <div
+            class="absolute w-10/12 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 lg:w-64 sm:w-56 aspect-square"
           >
-            <defs>
-              <!-- Gradient Definition -->
-              <linearGradient
-                id="gradientLine"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="100%"
-              >
-                <stop
-                  offset="0%"
-                  style="stop-color: #0077c0; stop-opacity: 1"
-                />
-                <stop
-                  offset="100%"
-                  style="stop-color: #c7eeff; stop-opacity: 0"
-                />
-              </linearGradient>
+            <!-- Rotating SVG Line -->
+            <svg
+              viewBox="0 0 220 220"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%+40px)] h-[calc(100%+40px)] z-[-2]"
+            >
+              <defs>
+                <!-- Gradient Definition -->
+                <linearGradient
+                  id="gradientLine"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style="stop-color: #0077c0; stop-opacity: 1"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color: #c7eeff; stop-opacity: 0"
+                  />
+                </linearGradient>
 
-              <!-- Mask to fade out bottom part -->
-              <mask id="fade-mask">
-                <circle cx="110" cy="110" r="105" fill="white" />
-                <rect
-                  x="0"
-                  y="110"
-                  width="220"
-                  height="110"
-                  fill="url(#bottomFadeGradient)"
-                />
-              </mask>
+                <!-- Mask to fade out bottom part -->
+                <mask id="fade-mask">
+                  <circle cx="110" cy="110" r="105" fill="white" />
+                  <rect
+                    x="0"
+                    y="110"
+                    width="220"
+                    height="110"
+                    fill="url(#bottomFadeGradient)"
+                  />
+                </mask>
 
-              <!-- Gradient for bottom fade -->
-              <linearGradient id="bottomFadeGradient">
-                <stop offset="0%" stop-color="white" stop-opacity="1" />
-                <stop offset="100%" stop-color="white" stop-opacity="0" />
-              </linearGradient>
-            </defs>
+                <!-- Gradient for bottom fade -->
+                <linearGradient id="bottomFadeGradient">
+                  <stop offset="0%" stop-color="white" stop-opacity="1" />
+                  <stop offset="100%" stop-color="white" stop-opacity="0" />
+                </linearGradient>
+              </defs>
 
-            <circle
-              cx="110"
-              cy="110"
-              r="105"
-              fill="none"
-              stroke="url(#gradientLine)"
-              stroke-width="4"
-              stroke-linecap="round"
-              mask="url(#fade-mask)"
-              class="origin-center animate-spin-slow"
-            />
-          </svg>
-        </div>
+              <circle
+                cx="110"
+                cy="110"
+                r="105"
+                fill="none"
+                stroke="url(#gradientLine)"
+                stroke-width="4"
+                stroke-linecap="round"
+                mask="url(#fade-mask)"
+                class="origin-center animate-spin-slow"
+              />
+            </svg>
+          </div>
 
-        <div
-          class="absolute left-5 sm:left-10 mobile-m:left-6 mobile-l:left-8 lg:left-20 xl:left-28 lg:top-40 sm:top-36 top-[9.5rem] mobile-m:top-44 mobile-l:top-48 -translate-y-1/2 lg:w-64 sm:w-56 w-10/12 aspect-square bg-gradient-to-br from-[#0077C0] via-[#0077C0] to-[#C7EEFF] rounded-full z-[-1]"
-        ></div>
-        <div class="w-full py-8 sm:w-2/5">
+          <!-- Gradient Circle Background -->
+          <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-64 sm:w-56 w-10/12 aspect-square bg-gradient-to-br from-[#0077C0] to-[#C7EEFF] rounded-full z-[-1]"
+          ></div>
+
+          <!-- Image -->
           <img
             src="/assets/images/IMG_20241022_152417-removebg-preview.png"
             alt="Iza"
@@ -297,8 +301,8 @@
             <p>
               Hi, my name is
               <span class="font-medium">Alfriza Akhmad Rahadi</span>, you may
-              call me <span class="font-medium">Alfriza</span> or
-              <span class="font-medium">Iza</span>. I grew up in a village
+              call me <span class="font-medium">Iza</span> or
+              <span class="font-medium">Alfriza</span>. I grew up in a village
               located in <span class="font-medium">Bogor, Jawa Barat.</span> I
               am currently studying at
               <a
@@ -318,34 +322,67 @@
             </p>
           </div>
           <div class="flex lg:gap-2 sm:gap-1.5 gap-1 flex-wrap lg:mt-3 mt-2">
-            <div x-data="{ open: false }" class="relative inline-block">
-              <!-- Skill Button -->
+            <!-- Laravel -->
+            <div class="relative inline-block">
               <button
-                @click="open = !open"
                 class="px-3 text-sm text-center transition rounded lg:text-base filter hover:brightness-75"
-                style="background-color: #ff2d20; color: #000"
+                style="background-color: #ff2d20; color: #ffffff"
               >
                 Laravel
               </button>
             </div>
-            <div x-data="{ open: false }" class="relative inline-block">
-              <!-- Skill Button -->
+
+            <!-- Tailwind CSS -->
+            <div class="relative inline-block">
               <button
-                @click="open = !open"
                 class="px-3 text-sm text-center transition rounded lg:text-base filter hover:brightness-75"
-                style="background-color: #06b6d4; color: #fff"
+                style="background-color: #06b6d4; color: #ffffff"
               >
                 Tailwind CSS
               </button>
             </div>
-            <div x-data="{ open: false }" class="relative inline-block">
-              <!-- Skill Button -->
+
+            <!-- React -->
+            <div class="relative inline-block">
               <button
-                @click="open = !open"
                 class="px-3 text-sm text-center transition rounded lg:text-base filter hover:brightness-75"
-                style="background-color: #61dafb; color: #fff"
+                style="background-color: #61dafb; color: #20232a"
               >
                 React
+              </button>
+            </div>
+
+            <!-- Next.js -->
+            <div class="relative inline-block">
+              <button
+                class="px-3 text-sm text-center transition border-white rounded outline-none lg:text-base filter hover:brightness-75"
+                style="
+                  background-color: #000000;
+                  color: #ffffff;
+                  border-width: 0.5px;
+                "
+              >
+                Next.js
+              </button>
+            </div>
+
+            <!-- Nest.js -->
+            <div class="relative inline-block">
+              <button
+                class="px-3 text-sm text-center transition rounded lg:text-base filter hover:brightness-75"
+                style="background-color: #e0234e; color: #ffffff"
+              >
+                Nest.js
+              </button>
+            </div>
+
+            <!-- Golang -->
+            <div class="relative inline-block">
+              <button
+                class="px-3 text-sm text-center transition rounded lg:text-base filter hover:brightness-75"
+                style="background-color: #00add8; color: #ffffff"
+              >
+                Golang
               </button>
             </div>
           </div>
@@ -723,7 +760,7 @@
                 <h3 class="text-right text-gray-400 sm:text-lg">2025-04-21</h3>
               </div>
               <a
-                href=".?jenis_apk=Web+app#project"
+                href="#"
                 class="px-3 py-1 rounded-xl bg-[#0077C0] lg:text-sm text-xs font-medium hover:bg-[#005a99] transition duration-200"
               >
                 Web app
@@ -813,7 +850,7 @@
                 <h3 class="text-right text-gray-400 sm:text-lg">2024-11-26</h3>
               </div>
               <a
-                href=".?jenis_apk=Web+app#project"
+                href="#"
                 class="px-3 py-1 rounded-xl bg-[#0077C0] lg:text-sm text-xs font-medium hover:bg-[#005a99] transition duration-200"
               >
                 Web app
@@ -928,7 +965,7 @@
                 <h3 class="text-right text-gray-400 sm:text-lg">2024-07-11</h3>
               </div>
               <a
-                href=".?jenis_apk=UI%2FUX#project"
+                href="#"
                 class="px-3 py-1 rounded-xl bg-[#0077C0] lg:text-sm text-xs font-medium hover:bg-[#005a99] transition duration-200"
               >
                 UI/UX
@@ -996,7 +1033,7 @@
                 <h3 class="text-right text-gray-400 sm:text-lg">2024-06-07</h3>
               </div>
               <a
-                href=".?jenis_apk=Web+app#project"
+                href="#"
                 class="px-3 py-1 rounded-xl bg-[#0077C0] lg:text-sm text-xs font-medium hover:bg-[#005a99] transition duration-200"
               >
                 Web app
@@ -1151,10 +1188,7 @@
             >
               <p class="text-sm font-extralight">
                 <span x-text="getTimeAgo()"></span> •
-                <a
-                  href=".?jenis_artikel=Personal+Blog#blog"
-                  class="font-medium hover:text-gray-400"
-                >
+                <a href="#" class="font-medium hover:text-gray-400">
                   Personal Blog
                 </a>
               </p>
