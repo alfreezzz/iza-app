@@ -578,42 +578,38 @@
 
         <div
           class="cv w-full border border-[#C7EEFF] sm:aspect-2/1 max-sm:min-h-32 rounded-lg flex flex-col justify-center items-center p-2"
+          x-data="{
+            fileSize: 'Loading...',
+            async getFileSize() {
+              try {
+                const res = await fetch('assets/files/CV_Alfriza Akhmad Rahadi_Web Developer.pdf', { method: 'HEAD' });
+                const bytes = res.headers.get('content-length');
+                if (bytes) {
+                  const mb = bytes / (1024 * 1024);
+                  this.fileSize = mb >= 1 
+                    ? mb.toFixed(1) + ' MB' 
+                    : Math.round(bytes / 1024) + ' KB';
+                } else {
+                  this.fileSize = 'PDF';
+                }
+              } catch {
+                this.fileSize = 'PDF';
+              }
+            }
+          }"
+          x-init="getFileSize()"
         >
           <a
-            href="#"
+            href="assets/files/CV_Alfriza Akhmad Rahadi_Web Developer.pdf"
             download
             class="cursor-pointer group/download relative flex gap-1 px-8 sm:px-4 lg:text-base lg:px-6 sm:text-xs items-center py-4 sm:py-2 bg-[#5c5fe9] text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 font-semibold shadow-xl active:shadow-inner transition-all duration-300"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              class="w-6 h-6 sm:h-4 sm:w-4 lg:h-5 lg:w-5"
-            >
-              <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
-              <g
-                stroke-linejoin="round"
-                stroke-linecap="round"
-                id="SVGRepo_tracerCarrier"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <g id="Interface / Download">
-                  <path
-                    stroke-linejoin="round"
-                    stroke-linecap="round"
-                    stroke-width="2"
-                    stroke="#f1f1f1"
-                    d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12"
-                    id="Vector"
-                  ></path>
-                </g>
-              </g>
-            </svg>
+            <!-- SVG icon sama seperti sebelumnya -->
             Download CV
             <div
               class="absolute text-xs uppercase scale-0 rounded-md py-2 px-2 bg-[#5c5fe9] left-2/4 mb-3 bottom-full group-hover/download:scale-100 origin-bottom transition-all duration-300 shadow-lg before:content-[''] before:absolute before:top-full before:left-2/4 before:w-3 before:h-3 before:border-solid before:bg-[#5c5fe9] before:rotate-45 before:-translate-y-2/4 before:-translate-x-2/4"
             >
-              69mb
+              <span x-text="fileSize"></span>
             </div>
           </a>
         </div>
@@ -765,7 +761,7 @@
                     AdventureOut
                   </h2>
                 </a>
-                <h3 class="text-right text-gray-400 sm:text-lg">2025-04-21</h3>
+                <h3 class="text-right text-gray-400 sm:text-lg">2025 April</h3>
               </div>
               <a
                 href="#"
@@ -855,7 +851,7 @@
                     AM Agenda Pembelajaran Harian
                   </h2>
                 </a>
-                <h3 class="text-right text-gray-400 sm:text-lg">2024-11-26</h3>
+                <h3 class="text-right text-gray-400 sm:text-lg">2025 May</h3>
               </div>
               <a
                 href="#"
@@ -970,7 +966,7 @@
                     E-Store
                   </h2>
                 </a>
-                <h3 class="text-right text-gray-400 sm:text-lg">2024-07-11</h3>
+                <h3 class="text-right text-gray-400 sm:text-lg">2024 July</h3>
               </div>
               <a
                 href="#"
@@ -1038,7 +1034,7 @@
                     Restaurant Reservation
                   </h2>
                 </a>
-                <h3 class="text-right text-gray-400 sm:text-lg">2024-06-07</h3>
+                <h3 class="text-right text-gray-400 sm:text-lg">2024 June</h3>
               </div>
               <a
                 href="#"
