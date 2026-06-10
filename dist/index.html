@@ -10,6 +10,10 @@
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
     <title>Alfreezzz_</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
     <link rel="icon" type="image/jpeg" href="/assets/favicon-B3YUjnrx.ico" />
     <link rel="apple-touch-icon" href="/assets/favicon-B3YUjnrx.ico" />
     <meta
@@ -304,17 +308,18 @@
           >
             <p>
               Hi, my name is
-              <span class="font-medium">Alfriza Akhmad Rahadi</span>, you may
+              <span class="font-medium">Alfriza Akhmad Rahadi</span>, you can
               call me <span class="font-medium">Iza</span> or
-              <span class="font-medium">Alfriza</span>. I grew up in a village
-              located in <span class="font-medium">Bogor, West Java.</span> I am
-              currently studying at
+              <span class="font-medium">Alfriza</span>. I grew up in a small
+              village located in
+              <span class="font-medium">Bogor, West Java.</span> I am a graduate
+              of
               <a
                 class="font-medium underline"
                 href="https://smkamaliah.sch.id/"
                 target="_blank"
               >
-                Amaliah Ciawi Vocational School</a
+                SMK Amaliah 1 Ciawi</a
               >
               with a Software Engineering Major.
             </p>
@@ -328,68 +333,50 @@
           </div>
           <div class="flex lg:gap-2 sm:gap-1.5 gap-1 flex-wrap lg:mt-3 mt-2">
             <!-- Laravel -->
-            <div class="relative inline-block">
-              <button
-                class="px-3 text-sm text-center transition rounded lg:text-base filter hover:brightness-75"
-                style="background-color: #ff2d20; color: #ffffff"
-              >
-                Laravel
-              </button>
-            </div>
+            <span
+              class="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium text-red-700 transition-all duration-200 border border-red-200 rounded-full bg-red-50 hover:-translate-y-1"
+            >
+              <i class="devicon-laravel-original colored"></i>
+              Laravel
+            </span>
 
             <!-- Tailwind CSS -->
-            <div class="relative inline-block">
-              <button
-                class="px-3 text-sm text-center transition rounded lg:text-base filter hover:brightness-75"
-                style="background-color: #06b6d4; color: #ffffff"
-              >
-                Tailwind CSS
-              </button>
-            </div>
+            <span
+              class="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium transition-all duration-200 border rounded-full bg-cyan-50 text-cyan-700 border-cyan-200 hover:-translate-y-1"
+            >
+              <i class="devicon-tailwindcss-original colored"></i>
+              Tailwind CSS
+            </span>
 
             <!-- React -->
-            <div class="relative inline-block">
-              <button
-                class="px-3 text-sm text-center transition rounded lg:text-base filter hover:brightness-75"
-                style="background-color: #61dafb; color: #20232a"
-              >
-                React
-              </button>
-            </div>
+            <span
+              class="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium transition-all duration-200 border rounded-full bg-sky-50 text-sky-700 border-sky-200 hover:-translate-y-1"
+            >
+              <i class="devicon-react-original"></i> React
+            </span>
 
             <!-- Next.js -->
-            <!-- <div class="relative inline-block">
-              <button
-                class="px-3 text-sm text-center transition border-white rounded outline-none lg:text-base filter hover:brightness-75"
-                style="
-                  background-color: #000000;
-                  color: #ffffff;
-                  border-width: 0.5px;
-                "
-              >
-                Next.js
-              </button>
-            </div> -->
+            <span
+              class="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium transition-all duration-200 border rounded-full bg-neutral-100 text-neutral-800 border-neutral-300 hover:-translate-y-1"
+            >
+              <i class="devicon-nextjs-plain"></i> Next.js
+            </span>
 
             <!-- NestJS -->
-            <!-- <div class="relative inline-block">
-              <button
-                class="px-3 text-sm text-center transition rounded lg:text-base filter hover:brightness-75"
-                style="background-color: #e0234e; color: #ffffff"
-              >
-                NestJS
-              </button>
-            </div> -->
+            <span
+              class="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium transition-all duration-200 border rounded-full bg-rose-50 text-rose-700 border-rose-200 hover:-translate-y-1"
+            >
+              <i class="devicon-nestjs-original colored"></i>
+              NestJS
+            </span>
 
             <!-- Golang -->
-            <!-- <div class="relative inline-block">
-              <button
-                class="px-3 text-sm text-center transition rounded lg:text-base filter hover:brightness-75"
-                style="background-color: #00add8; color: #ffffff"
-              >
-                Golang
-              </button>
-            </div> -->
+            <span
+              class="inline-flex items-center gap-1 px-3 py-1 text-xs font-medium transition-all duration-200 border rounded-full bg-sky-50 text-sky-800 border-sky-200 hover:-translate-y-1"
+            >
+              <i class="devicon-go-original-wordmark colored"></i>
+              Golang
+            </span>
           </div>
         </div>
       </div>
@@ -581,7 +568,7 @@
             fileSize: 'Loading...',
             async getFileSize() {
               try {
-                const res = await fetch('assets/files/CV_Alfriza Akhmad Rahadi_Web Developer.pdf', { method: 'HEAD' });
+                const res = await fetch('assets/files/CV_Alfriza Akhmad Rahadi.pdf', { method: 'HEAD' });
                 const bytes = res.headers.get('content-length');
                 if (bytes) {
                   const mb = bytes / (1024 * 1024);
@@ -599,7 +586,7 @@
           x-init="getFileSize()"
         >
           <a
-            href="assets/files/CV_Alfriza Akhmad Rahadi_Web Developer.pdf"
+            href="assets/files/CV_Alfriza Akhmad Rahadi.pdf"
             download
             class="cursor-pointer group/download relative flex gap-1 px-8 sm:px-4 lg:text-base lg:px-6 sm:text-xs items-center py-4 sm:py-2 bg-[#5c5fe9] text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 font-semibold shadow-xl active:shadow-inner transition-all duration-300"
           >
@@ -739,6 +726,121 @@
         <div>
           <div class="flex items-start justify-between max-lg:flex-col">
             <a
+              href="https://github.com/alfreezzz/AM1_AGENDA"
+              class="w-full lg:w-1/3"
+              target="_blank"
+            >
+              <img
+                src="/assets/AM%20Agenda%20Pembelajaran%20Harian-BZ9hTjgT.png"
+                alt="Project"
+                class="object-cover w-full h-auto rounded-lg hover:border-2 border-[#0077C0] transition"
+              />
+            </a>
+            <div class="w-full lg:w-2/3 lg:ml-6">
+              <div class="flex items-center justify-between mb-2 max-lg:mt-3">
+                <a
+                  href="https://github.com/alfreezzz/AM1_AGENDA"
+                  class="hover:underline"
+                  target="_blank"
+                >
+                  <h2 class="mr-4 text-lg font-semibold sm:text-2xl lg:mr-6">
+                    AM Agenda Pembelajaran Harian
+                  </h2>
+                </a>
+                <h3 class="text-right text-gray-400 sm:text-lg">2025 May</h3>
+              </div>
+              <a
+                href="#"
+                class="px-3 py-1 rounded-xl bg-[#0077C0] lg:text-sm text-xs font-medium hover:bg-[#005a99] transition duration-200"
+              >
+                Web app
+              </a>
+              <p class="mt-5 text-gray-300" id="project-description-3">
+                <span class="short-description">
+                  AM Agenda Pembelajaran Harian, was created to make it easier
+                  for Amaliah Ciawi Vocational School's teachers and students to
+                  manage attendance.
+                </span>
+                <span class="hidden full-description">
+                  AM Agenda Pembelajaran Harian, was created to make it easier
+                  for Amaliah Ciawi Vocational School's teachers and students to
+                  manage attendance.
+                </span>
+                <!-- <a
+                  href="javascript:void(0)"
+                  class="font-semibold text-[#C7EEFF] hover:underline read-more"
+                  data-id="3"
+                >
+                  Read More
+                </a> -->
+              </p>
+              <div class="flex items-center justify-between mt-5 lg:mt-7">
+                <div
+                  class="grid grid-cols-5 mobile-m:grid-cols-6 mobile-l:grid-cols-7 sm:grid-cols-12"
+                >
+                  <div
+                    class="rounded-full border border-[#C7EEFF] hover:translate-y-1 sm:w-10 sm:h-10 w-8 h-8 hover:bg-[#C7EEFF] transition duration-200 flex justify-center items-center"
+                  >
+                    <svg
+                      role="img"
+                      class="w-4 h-4 sm:w-5 sm:h-5"
+                      fill="#FF2D20"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>Laravel</title>
+                      <path
+                        d="M23.642 5.43a.364.364 0 01.014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934a.378.378 0 01-.188.326L9.93 23.949a.316.316 0 01-.066.027c-.008.002-.016.008-.024.01a.348.348 0 01-.192 0c-.011-.002-.02-.008-.03-.012-.02-.008-.042-.014-.062-.025L.533 18.755a.376.376 0 01-.189-.326V2.974c0-.033.005-.066.014-.098.003-.012.01-.02.014-.032a.369.369 0 01.023-.058c.004-.013.015-.022.023-.033l.033-.045c.012-.01.025-.018.037-.027.014-.012.027-.024.041-.034H.53L5.043.05a.375.375 0 01.375 0L9.93 2.647h.002c.015.01.027.021.04.033l.038.027c.013.014.02.03.033.045.008.011.02.021.025.033.01.02.017.038.024.058.003.011.01.021.013.032.01.031.014.064.014.098v9.652l3.76-2.164V5.527c0-.033.004-.066.013-.098.003-.01.01-.02.013-.032a.487.487 0 01.024-.059c.007-.012.018-.02.025-.033.012-.015.021-.03.033-.043.012-.012.025-.02.037-.028.014-.01.026-.023.041-.032h.001l4.513-2.598a.375.375 0 01.375 0l4.513 2.598c.016.01.027.021.042.031.012.01.025.018.036.028.013.014.022.03.034.044.008.012.019.021.024.033.011.02.018.04.024.06.006.01.012.021.015.032zm-.74 5.032V6.179l-1.578.908-2.182 1.256v4.283zm-4.51 7.75v-4.287l-2.147 1.225-6.126 3.498v4.325zM1.093 3.624v14.588l8.273 4.761v-4.325l-4.322-2.445-.002-.003H5.04c-.014-.01-.025-.021-.04-.031-.011-.01-.024-.018-.035-.027l-.001-.002c-.013-.012-.021-.025-.031-.04-.01-.011-.021-.022-.028-.036h-.002c-.008-.014-.013-.031-.02-.047-.006-.016-.014-.027-.018-.043a.49.49 0 01-.008-.057c-.002-.014-.006-.027-.006-.041V5.789l-2.18-1.257zM5.23.81L1.47 2.974l3.76 2.164 3.758-2.164zm1.956 13.505l2.182-1.256V3.624l-1.58.91-2.182 1.255v9.435zm11.581-10.95l-3.76 2.163 3.76 2.163 3.759-2.164zm-.376 4.978L16.21 7.087 14.63 6.18v4.283l2.182 1.256 1.58.908zm-8.65 9.654l5.514-3.148 2.756-1.572-3.757-2.163-4.323 2.489-3.941 2.27z"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="rounded-full border border-[#C7EEFF] hover:translate-y-1 sm:w-10 sm:h-10 w-8 h-8 hover:bg-[#C7EEFF] transition duration-200 flex justify-center items-center"
+                  >
+                    <svg
+                      role="img"
+                      class="w-4 h-4 sm:w-5 sm:h-5"
+                      fill="#06B6D4"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>Tailwind CSS</title>
+                      <path
+                        d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="rounded-full border border-[#C7EEFF] hover:translate-y-1 sm:w-10 sm:h-10 w-8 h-8 hover:bg-[#C7EEFF] transition duration-200 flex justify-center items-center"
+                  >
+                    <svg
+                      role="img"
+                      class="w-4 h-4 sm:w-5 sm:h-5"
+                      fill="#8BC0D0"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>Alpine.js</title>
+                      <path
+                        d="m24 12-5.72 5.746-5.724-5.741 5.724-5.75L24 12zM5.72 6.254 0 12l5.72 5.746h11.44L5.72 6.254z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <a
+                  href="https://github.com/alfreezzz/AM1_AGENDA"
+                  class="sm:text-lg text-sm mobile-m:text-base underline hover:no-underline decoration-2 decoration-solid decoration-[#0077C0] underline-offset-8 font-medium text-[#0077C0] hover:border-2 border-[#0077C0] sm:px-4 px-2 py-1 rounded-md hover:text-[#C7EEFF] transition"
+                  target="_blank"
+                >
+                  Live preview
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-start justify-between max-lg:flex-col">
+            <a
               href="https://alfreezzz.github.io/outbound-react-and-tailwind-css/"
               class="w-full lg:w-1/3"
               target="_blank"
@@ -817,121 +919,6 @@
                 </div>
                 <a
                   href="https://alfreezzz.github.io/outbound-react-and-tailwind-css/"
-                  class="sm:text-lg text-sm mobile-m:text-base underline hover:no-underline decoration-2 decoration-solid decoration-[#0077C0] underline-offset-8 font-medium text-[#0077C0] hover:border-2 border-[#0077C0] sm:px-4 px-2 py-1 rounded-md hover:text-[#C7EEFF] transition"
-                  target="_blank"
-                >
-                  Live preview
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="flex items-start justify-between max-lg:flex-col">
-            <a
-              href="https://github.com/alfreezzz/AM1_AGENDA"
-              class="w-full lg:w-1/3"
-              target="_blank"
-            >
-              <img
-                src="/assets/AM%20Agenda%20Pembelajaran%20Harian-BZ9hTjgT.png"
-                alt="Project"
-                class="object-cover w-full h-auto rounded-lg hover:border-2 border-[#0077C0] transition"
-              />
-            </a>
-            <div class="w-full lg:w-2/3 lg:ml-6">
-              <div class="flex items-center justify-between mb-2 max-lg:mt-3">
-                <a
-                  href="https://github.com/alfreezzz/AM1_AGENDA"
-                  class="hover:underline"
-                  target="_blank"
-                >
-                  <h2 class="mr-4 text-lg font-semibold sm:text-2xl lg:mr-6">
-                    AM Agenda Pembelajaran Harian
-                  </h2>
-                </a>
-                <h3 class="text-right text-gray-400 sm:text-lg">2025 May</h3>
-              </div>
-              <a
-                href="#"
-                class="px-3 py-1 rounded-xl bg-[#0077C0] lg:text-sm text-xs font-medium hover:bg-[#005a99] transition duration-200"
-              >
-                Web app
-              </a>
-              <p class="mt-5 text-gray-300" id="project-description-3">
-                <span class="short-description">
-                  AM Agenda Pembelajaran Harian, was created to make it easier
-                  for Amaliah Ciawi Vocational School's teachers and students to
-                  m...
-                </span>
-                <span class="hidden full-description">
-                  AM Agenda Pembelajaran Harian, was created to make it easier
-                  for Amaliah Ciawi Vocational School's teachers and students to
-                  manage attendance.
-                </span>
-                <a
-                  href="javascript:void(0)"
-                  class="font-semibold text-[#C7EEFF] hover:underline read-more"
-                  data-id="3"
-                >
-                  Read More
-                </a>
-              </p>
-              <div class="flex items-center justify-between mt-5 lg:mt-7">
-                <div
-                  class="grid grid-cols-5 mobile-m:grid-cols-6 mobile-l:grid-cols-7 sm:grid-cols-12"
-                >
-                  <div
-                    class="rounded-full border border-[#C7EEFF] hover:translate-y-1 sm:w-10 sm:h-10 w-8 h-8 hover:bg-[#C7EEFF] transition duration-200 flex justify-center items-center"
-                  >
-                    <svg
-                      role="img"
-                      class="w-4 h-4 sm:w-5 sm:h-5"
-                      fill="#FF2D20"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>Laravel</title>
-                      <path
-                        d="M23.642 5.43a.364.364 0 01.014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934a.378.378 0 01-.188.326L9.93 23.949a.316.316 0 01-.066.027c-.008.002-.016.008-.024.01a.348.348 0 01-.192 0c-.011-.002-.02-.008-.03-.012-.02-.008-.042-.014-.062-.025L.533 18.755a.376.376 0 01-.189-.326V2.974c0-.033.005-.066.014-.098.003-.012.01-.02.014-.032a.369.369 0 01.023-.058c.004-.013.015-.022.023-.033l.033-.045c.012-.01.025-.018.037-.027.014-.012.027-.024.041-.034H.53L5.043.05a.375.375 0 01.375 0L9.93 2.647h.002c.015.01.027.021.04.033l.038.027c.013.014.02.03.033.045.008.011.02.021.025.033.01.02.017.038.024.058.003.011.01.021.013.032.01.031.014.064.014.098v9.652l3.76-2.164V5.527c0-.033.004-.066.013-.098.003-.01.01-.02.013-.032a.487.487 0 01.024-.059c.007-.012.018-.02.025-.033.012-.015.021-.03.033-.043.012-.012.025-.02.037-.028.014-.01.026-.023.041-.032h.001l4.513-2.598a.375.375 0 01.375 0l4.513 2.598c.016.01.027.021.042.031.012.01.025.018.036.028.013.014.022.03.034.044.008.012.019.021.024.033.011.02.018.04.024.06.006.01.012.021.015.032zm-.74 5.032V6.179l-1.578.908-2.182 1.256v4.283zm-4.51 7.75v-4.287l-2.147 1.225-6.126 3.498v4.325zM1.093 3.624v14.588l8.273 4.761v-4.325l-4.322-2.445-.002-.003H5.04c-.014-.01-.025-.021-.04-.031-.011-.01-.024-.018-.035-.027l-.001-.002c-.013-.012-.021-.025-.031-.04-.01-.011-.021-.022-.028-.036h-.002c-.008-.014-.013-.031-.02-.047-.006-.016-.014-.027-.018-.043a.49.49 0 01-.008-.057c-.002-.014-.006-.027-.006-.041V5.789l-2.18-1.257zM5.23.81L1.47 2.974l3.76 2.164 3.758-2.164zm1.956 13.505l2.182-1.256V3.624l-1.58.91-2.182 1.255v9.435zm11.581-10.95l-3.76 2.163 3.76 2.163 3.759-2.164zm-.376 4.978L16.21 7.087 14.63 6.18v4.283l2.182 1.256 1.58.908zm-8.65 9.654l5.514-3.148 2.756-1.572-3.757-2.163-4.323 2.489-3.941 2.27z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="rounded-full border border-[#C7EEFF] hover:translate-y-1 sm:w-10 sm:h-10 w-8 h-8 hover:bg-[#C7EEFF] transition duration-200 flex justify-center items-center"
-                  >
-                    <svg
-                      role="img"
-                      class="w-4 h-4 sm:w-5 sm:h-5"
-                      fill="#06B6D4"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>Tailwind CSS</title>
-                      <path
-                        d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="rounded-full border border-[#C7EEFF] hover:translate-y-1 sm:w-10 sm:h-10 w-8 h-8 hover:bg-[#C7EEFF] transition duration-200 flex justify-center items-center"
-                  >
-                    <svg
-                      role="img"
-                      class="w-4 h-4 sm:w-5 sm:h-5"
-                      fill="#8BC0D0"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>Alpine.js</title>
-                      <path
-                        d="m24 12-5.72 5.746-5.724-5.741 5.724-5.75L24 12zM5.72 6.254 0 12l5.72 5.746h11.44L5.72 6.254z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <a
-                  href="https://github.com/alfreezzz/AM1_AGENDA"
                   class="sm:text-lg text-sm mobile-m:text-base underline hover:no-underline decoration-2 decoration-solid decoration-[#0077C0] underline-offset-8 font-medium text-[#0077C0] hover:border-2 border-[#0077C0] sm:px-4 px-2 py-1 rounded-md hover:text-[#C7EEFF] transition"
                   target="_blank"
                 >
