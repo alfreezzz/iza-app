@@ -6,6 +6,12 @@
     animation: typing 2.3s steps(12, end) 1, blink 1s step-end infinite;
 }
 
+.space-y-12 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(3rem /* 48px */ * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(3rem /* 48px */ * var(--tw-space-y-reverse));
+}
+
 @keyframes typing {
     0% {
         width: 0;

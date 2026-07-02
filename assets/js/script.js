@@ -22,22 +22,21 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  // });
-
-  // document.addEventListener("DOMContentLoaded", () => {
+  // Typing loop animation (aman jika elemennya tidak ada)
   const typingElement = document.querySelector('.typing-loop-animation')
 
-  function resetTypingAnimation() {
-    typingElement.classList.remove('typing-loop-animation') // Hapus animasi
-    void typingElement.offsetWidth // Paksa reflow
-    typingElement.classList.add('typing-loop-animation') // Tambahkan lagi animasi
+  if (typingElement) {
+    function resetTypingAnimation() {
+      typingElement.classList.remove('typing-loop-animation') // Hapus animasi
+      void typingElement.offsetWidth // Paksa reflow
+      typingElement.classList.add('typing-loop-animation') // Tambahkan lagi animasi
+    }
+
+    // Set perulangan animasi dengan jeda 3 detik
+    setInterval(resetTypingAnimation, 7000) // 4s (durasi animasi) + 3s (jeda)
   }
 
-  // Set perulangan animasi dengan jeda 3 detik
-  setInterval(resetTypingAnimation, 7000) // 4s (durasi animasi) + 3s (jeda)
-  // });
-
-  // document.addEventListener("DOMContentLoaded", function () {
+  // Read more / read less
   const readMoreLinks = document.querySelectorAll('.read-more')
 
   readMoreLinks.forEach((link) => {
@@ -49,6 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const fullDescription = document.querySelector(
         `#project-description-${projectId} .full-description`
       )
+
+      if (!shortDescription || !fullDescription) return
 
       // Toggle visibility
       shortDescription.classList.toggle('hidden')
@@ -62,148 +63,139 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   })
-  // });
 
-  // document.addEventListener("DOMContentLoaded", function () {
-  const experienceContainer = document.getElementById('experience')
-  const experiencesContent = document.getElementById('experiences-container')
-  const timelineCircle = document.getElementById('timeline-circle')
-  const timelineLine = document.querySelector('.timeline-line')
+  // ============================================================
+  // Timeline circle animation (Experience / Sertifikat)
+  // ------------------------------------------------------------
+  // Digeneralisasi agar mendukung banyak grup timeline sekaligus
+  // (mis. dua tab: Experience & Sertifikat) tanpa bergantung pada
+  // ID tunggal. Setiap grup ditandai dengan attribute [data-timeline]
+  // dan berisi elemen ".timeline-line", ".timeline-circle", dan
+  // ".timeline-content" di dalamnya.
+  //
+  // PENTING: bagian ini TIDAK PERNAH melakukan `return` yang
+  // menghentikan seluruh callback DOMContentLoaded. Jika sebuah
+  // grup timeline tidak ditemukan/tidak lengkap, grup itu saja yang
+  // dilewati — bagian lain dari script (observer scroll-section,
+  // hero animation, filter artikel) tetap berjalan normal.
+  // ============================================================
+  const timelineGroups = document.querySelectorAll('[data-timeline]')
 
-  if (
-    !experienceContainer ||
-    !timelineCircle ||
-    !timelineLine ||
-    !experiencesContent
-  )
-    return
+  timelineGroups.forEach((group) => {
+    const timelineLine = group.querySelector('.timeline-line')
+    const timelineCircle = group.querySelector('.timeline-circle')
+    const timelineContent = group.querySelector('.timeline-content')
 
-  // Calculate initial positions and dimensions
-  function updateMeasurements() {
-    // Get the container's position and dimensions
-    const containerRect = experienceContainer.getBoundingClientRect()
-    const contentRect = experiencesContent.getBoundingClientRect()
+    // Lewati grup ini saja kalau strukturnya tidak lengkap
+    if (!timelineLine || !timelineCircle || !timelineContent) return
 
-    // Calculate the timeline start and end points
-    const timelineStart = timelineLine.offsetTop
-    const timelineEnd = timelineStart + timelineLine.offsetHeight
+    function updateMeasurements() {
+      const groupRect = group.getBoundingClientRect()
+      const contentRect = timelineContent.getBoundingClientRect()
 
-    return {
-      containerTop: containerRect.top,
-      containerHeight: containerRect.height,
-      contentTop: contentRect.top,
-      contentHeight: contentRect.height,
-      timelineStart: timelineStart,
-      timelineEnd: timelineEnd,
-      timelineLength: timelineEnd - timelineStart,
-    }
-  }
+      const timelineStart = timelineLine.offsetTop
+      const timelineEnd = timelineStart + timelineLine.offsetHeight
 
-  // Update circle position based on scroll
-  function updateCirclePosition() {
-    const measurements = updateMeasurements()
-    const viewportHeight = window.innerHeight
-    const viewportMidpoint = viewportHeight / 5
-
-    // Check if the experience container has reached or passed the middle of the viewport
-    if (measurements.containerTop <= viewportMidpoint) {
-      // Calculate how far the container has moved past the midpoint
-      const pastMidpoint = viewportMidpoint - measurements.containerTop
-
-      // Calculate the progress through the content (0 to 1)
-      let scrollProgress = Math.max(
-        0,
-        Math.min(1, pastMidpoint / measurements.contentHeight)
-      )
-
-      // Calculate the circle's position along the timeline
-      const circlePosition =
-        measurements.timelineStart +
-        measurements.timelineLength * scrollProgress
-
-      // Update the circle's position
-      timelineCircle.style.top = circlePosition + 'px'
-    } else {
-      // If the container hasn't reached the midpoint yet, keep the circle at the start
-      timelineCircle.style.top = measurements.timelineStart + 'px'
+      return {
+        containerTop: groupRect.top,
+        containerHeight: groupRect.height,
+        contentHeight: contentRect.height,
+        timelineStart: timelineStart,
+        timelineEnd: timelineEnd,
+        timelineLength: timelineEnd - timelineStart,
+      }
     }
 
-    // If we've scrolled past the content, keep the circle at the end of the timeline
-    if (
-      measurements.containerTop + measurements.containerHeight <
-      viewportMidpoint
-    ) {
-      timelineCircle.style.top = measurements.timelineEnd + 'px'
+    function updateCirclePosition() {
+      // Jangan hitung/ubah posisi kalau grup sedang disembunyikan
+      // (mis. tab yang tidak aktif -> display: none via x-show)
+      if (group.offsetParent === null) return
+
+      const measurements = updateMeasurements()
+      const viewportHeight = window.innerHeight
+      const viewportMidpoint = viewportHeight / 3
+
+      if (measurements.containerTop <= viewportMidpoint) {
+        const pastMidpoint = viewportMidpoint - measurements.containerTop
+
+        let scrollProgress = Math.max(
+          0,
+          Math.min(1, pastMidpoint / measurements.contentHeight)
+        )
+
+        const circlePosition =
+          measurements.timelineStart +
+          measurements.timelineLength * scrollProgress
+
+        timelineCircle.style.top = circlePosition + 'px'
+      } else {
+        timelineCircle.style.top = measurements.timelineStart + 'px'
+      }
+
+      if (
+        measurements.containerTop + measurements.containerHeight <
+        viewportMidpoint
+      ) {
+        timelineCircle.style.top = measurements.timelineEnd + 'px'
+      }
     }
-  }
 
-  // Listen for scroll events
-  window.addEventListener('scroll', updateCirclePosition)
+    window.addEventListener('scroll', updateCirclePosition)
+    window.addEventListener('resize', updateCirclePosition)
 
-  // Initialize the circle position
-  updateCirclePosition()
-
-  // Update measurements on resize
-  window.addEventListener('resize', function () {
+    // Inisialisasi posisi awal
     updateCirclePosition()
   })
 
-  // Buat Observer untuk memantau elemen
+  // Observer untuk animasi fade/slide-in section (.scroll-section)
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        // Langsung tambahkan kelas in-view saat elemen masuk viewport
         if (entry.isIntersecting) {
           entry.target.classList.add('in-view')
         }
       })
     },
     {
-      // Opsi untuk memicu saat 10% elemen terlihat
       threshold: 0.1,
     }
   )
 
-  // Pilih semua elemen dengan kelas scroll-section
   const scrollSections = document.querySelectorAll('.scroll-section')
-
-  // Amati setiap elemen
   scrollSections.forEach((section) => {
     observer.observe(section)
   })
 
-  // Gunakan Intersection Observer untuk memicu animasi
-  const heroObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('hero-visible')
-          // Hentikan observasi setelah animasi dimulai
-          heroObserver.unobserve(entry.target)
-        }
-      })
-    },
-    {
-      threshold: 0.1, // Memulai animasi saat 10% elemen terlihat
-    }
-  )
-
-  // Amati elemen hero
+  // Animasi hero (aman jika elemennya tidak ada)
   const heroSection = document.getElementById('hero')
-  heroObserver.observe(heroSection)
 
-  // ambil semua artikel
+  if (heroSection) {
+    const heroObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('hero-visible')
+            heroObserver.unobserve(entry.target)
+          }
+        })
+      },
+      {
+        threshold: 0.1,
+      }
+    )
+
+    heroObserver.observe(heroSection)
+  }
+
+  // Filter artikel berdasarkan parameter URL
   const articles = document.querySelectorAll('[data-jenis]')
-
-  // cek URL parameter
   const urlParams = new URLSearchParams(window.location.search)
   const jenisArtikel = urlParams.get('jenis_artikel')
 
   if (jenisArtikel) {
     articles.forEach((article) => {
-      // bandingkan isi data-jenis dengan parameter URL
       if (article.dataset.jenis !== jenisArtikel.replace('+', ' ')) {
-        article.style.display = 'none' // sembunyikan
+        article.style.display = 'none'
       }
     })
   }

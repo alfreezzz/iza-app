@@ -587,103 +587,346 @@
 
     <div
       id="experience"
+      x-data="{ tab: 'experience' }"
       class="scroll-section mt-32 lg:px-8 sm:px-5 px-3 pt-3 pb-6 xl:mx-32 mx-5 border border-[#C7EEFF] rounded-lg shadow-lg shadow-[#C7EEFF] relative"
     >
       <h1
-        class="text-center lg:text-5xl mobile-m:text-4xl text-3xl font-bold tracking-wide lg:py-3 pb-5 sm:pb-4 bg-gradient-to-b from-[#0077C0] via-[#0077C0] to-[#C7EEFF] bg-clip-text text-transparent"
+        class="text-center lg:text-4xl sm:text-2xl text-lg font-bold tracking-wide lg:py-3 pb-5 sm:pb-4 bg-gradient-to-b from-[#0077C0] via-[#0077C0] to-[#C7EEFF] bg-clip-text text-transparent"
       >
-        -- Experience --
+        --
+        <button
+          type="button"
+          @click="tab = 'experience'; $nextTick(() => window.dispatchEvent(new Event('scroll')))"
+          :class="tab === 'experience' ? 'underline underline-offset-8 decoration-4' : 'no-underline'"
+          class="p-0 m-0 align-baseline transition-all bg-transparent border-0"
+        >
+          Experience
+        </button>
+        <span>/</span>
+        <button
+          type="button"
+          @click="tab = 'certificate'; $nextTick(() => window.dispatchEvent(new Event('scroll')))"
+          :class="tab === 'certificate' ? 'underline underline-offset-8 decoration-4' : 'no-underline'"
+          class="p-0 m-0 align-baseline transition-all bg-transparent border-0"
+        >
+          Certificate
+        </button>
+        --
       </h1>
+      
       <h2
+        x-show="tab === 'experience'"
         class="mb-5 text-xs italic tracking-wider text-center font-extralight lg:text-base mobile-m:text-sm max-lg:-mt-3"
       >
         <span class="font-medium">Internships</span>,
         <span class="font-medium">freelance work</span>, and
         <span class="font-medium">personal projects</span>.
       </h2>
+    
+      <h2
+        x-show="tab === 'certificate'"
+        x-cloak
+        class="mb-5 text-xs italic tracking-wider text-center font-extralight lg:text-base mobile-m:text-sm max-lg:-mt-3"
+      >
+        <span class="font-medium">Certifications</span> and
+        <span class="font-medium">credentials</span> earned along the way.
+      </h2>
+    
+      <!-- EXPERIENCE TAB -->
+      <div x-show="tab === 'experience'" data-timeline>
+        <div
+          class="timeline-line absolute left-4 sm:left-32 lg:left-44 w-px top-24 sm:top-20 lg:top-32 bottom-9 lg:bottom-10 bg-[#C7EEFF]"
+        ></div>
+        <div
+          class="timeline-circle absolute sm:w-5 sm:h-5 w-4 h-4 bg-[#0077C0] top-24 sm:top-20 lg:top-32 rounded-full left-4 sm:left-32 lg:left-44"
+          style="transform: translateX(-50%); z-index: 2"
+        ></div>
+    
+        <div class="mt-8 mb-4 space-y-12 timeline-content lg:mt-12">
 
-      <div
-        class="timeline-line absolute left-4 sm:left-32 lg:left-44 w-px top-24 sm:top-20 lg:top-32 bottom-9 lg:bottom-10 bg-[#C7EEFF]"
-      ></div>
-      <div
-        id="timeline-circle"
-        class="absolute sm:w-5 sm:h-5 w-4 h-4 bg-[#0077C0] top-24 sm:top-20 lg:top-32 rounded-full left-4 sm:left-32 lg:left-44"
-        style="transform: translateX(-50%); z-index: 2"
-      ></div>
-
-      <div id="experiences-container" class="mt-8 mb-4 space-y-16 lg:mt-12">
-        <div class="relative flex">
-          <div class="flex">
-            <div
-              class="max-sm:hidden font-light tracking-widest lg:w-36 w-[6.5rem] lg:text-base text-sm"
-            >
-              2025 July - <span class="text-right">November</span>
+          <div class="relative flex">
+            <div class="flex">
+              <div
+                class="max-sm:hidden font-light tracking-widest lg:w-36 w-[6.5rem] lg:text-base text-sm"
+              >
+                2025 July - <span class="text-right">November</span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center opacity-0">
+              <!-- Hidden placeholder -->
+              <div class="w-4 h-4 rounded-full sm:w-5 sm:h-5"></div>
+            </div>
+            <div class="ml-1 lg:ml-10 sm:ml-5">
+              <div class="text-xs font-light tracking-widest sm:hidden">
+                2025 July - November
+              </div>
+              <h2
+                class="mb-2 text-base font-semibold tracking-wide lg:text-lg sm:font-bold"
+              >
+                PT Matik Creative Technology - Full Stack Developer
+              </h2>
+              <p
+                class="text-sm font-light leading-normal tracking-wider text-justify lg:text-base"
+              >
+                During my internship as a Web Developer at PT Matik Creative
+                Technology, I worked on tasks assigned by the project lead,
+                primarily focusing on the development and improvement of
+                dashboards for several applications. My responsibilities included
+                implementing features based on given specifications, integrating
+                APIs, optimizing data presentation, and ensuring smooth
+                functionality of the dashboards. I collaborated with the
+                development team to deliver maintainable, efficient, and
+                user-friendly administrative interfaces in accordance with the
+                company's standards.
+              </p>
             </div>
           </div>
-          <div class="flex flex-col items-center opacity-0">
-            <!-- Hidden placeholder -->
-            <div class="w-4 h-4 rounded-full sm:w-5 sm:h-5"></div>
-          </div>
-          <div class="ml-1 lg:ml-10 sm:ml-5">
-            <div class="text-xs font-light tracking-widest sm:hidden">
-              2025 July - November
+    
+          <div class="relative flex">
+            <div class="flex">
+              <div
+                class="max-sm:hidden font-light tracking-widest lg:w-36 w-[6.5rem] lg:text-base text-sm"
+              >
+                2024 October - <span class="text-right">2025 June</span>
+              </div>
             </div>
-            <h2
-              class="mb-3 text-base font-semibold tracking-wide lg:text-lg sm:font-bold lg:mb-5"
-            >
-              PT Matik Creative Technology - Full Stack Developer
-            </h2>
-            <p
-              class="text-sm font-light leading-normal tracking-wider text-justify lg:text-base"
-            >
-              During my internship as a Web Developer at PT Matik Creative
-              Technology, I worked on tasks assigned by the project lead,
-              primarily focusing on the development and improvement of
-              dashboards for several applications. My responsibilities included
-              implementing features based on given specifications, integrating
-              APIs, optimizing data presentation, and ensuring smooth
-              functionality of the dashboards. I collaborated with the
-              development team to deliver maintainable, efficient, and
-              user-friendly administrative interfaces in accordance with the
-              company's standards.
-            </p>
+            <div class="flex flex-col items-center opacity-0">
+              <!-- Hidden placeholder -->
+              <div class="w-4 h-4 rounded-full sm:w-5 sm:h-5"></div>
+            </div>
+            <div class="ml-1 lg:ml-10 sm:ml-5">
+              <div class="text-xs font-light tracking-widest sm:hidden">
+                2024 October - 2025 June
+              </div>
+              <h2
+                class="mb-2 text-base font-semibold tracking-wide lg:text-lg sm:font-bold"
+              >
+                SMK Amaliah 1&amp;2 Ciawi Bogor - Back End Developer
+              </h2>
+              <p
+                class="text-sm font-light leading-normal tracking-wider text-justify lg:text-base"
+              >
+                As a back-end developer for AM Agenda Pembelajaran Harian, I was
+                responsible for designing and implementing the system architecture
+                to ensure seamless attendance management for both teachers and
+                students at Amaliah Ciawi Vocational School. I optimized database
+                performance, and integrated authentication mechanisms to enhance
+                user experience. Additionally, I contributed to the web interface,
+                ensuring a responsive and user-friendly design that simplifies
+                daily learning management for teachers.
+              </p>
+            </div>
           </div>
         </div>
+      </div>
+    
+      <!-- CERTIFICATE TAB -->
+      <div x-show="tab === 'certificate'" x-cloak data-timeline>
+        <div
+          class="timeline-line absolute left-4 sm:left-32 lg:left-44 w-px top-24 sm:top-20 lg:top-32 bottom-9 lg:bottom-10 bg-[#C7EEFF]"
+        ></div>
+        <div
+          class="timeline-circle absolute sm:w-5 sm:h-5 w-4 h-4 bg-[#0077C0] top-24 sm:top-20 lg:top-32 rounded-full left-4 sm:left-32 lg:left-44"
+          style="transform: translateX(-50%); z-index: 2"
+        ></div>
+    
+        <div class="mt-8 mb-4 space-y-12 timeline-content lg:mt-12">
 
-        <div class="relative flex">
-          <div class="flex">
-            <div
-              class="max-sm:hidden font-light tracking-widest lg:w-36 w-[6.5rem] lg:text-base text-sm"
-            >
-              2024 October - <span class="text-right">2025 June</span>
+          <div class="relative flex">
+            <div class="flex">
+              <div
+                class="max-sm:hidden font-light tracking-widest lg:w-36 w-[6.5rem] lg:text-base text-sm"
+              >
+                2026 April
+              </div>
+            </div>
+            <div class="flex flex-col items-center opacity-0">
+              <!-- Hidden placeholder -->
+              <div class="w-4 h-4 rounded-full sm:w-5 sm:h-5"></div>
+            </div>
+            <div class="ml-1 lg:ml-10 sm:ml-5">
+              <div class="text-xs font-light tracking-widest sm:hidden">
+                2026 April
+              </div>
+    
+              <h2
+                class="text-base font-semibold tracking-wide lg:text-lg sm:font-bold"
+              >
+                EF SET English Certificate 62/100 (C1 Advanced)
+              </h2>
+              <p
+                class="mb-4 text-sm font-medium tracking-wide text-[#0077C0] lg:text-base"
+              >
+                EF Standard English Test (EF SET)
+              </p>
+              <a
+                href="https://cert.efset.org/en/yquAtE"
+                target="_blank"
+                class="inline-flex group drop-shadow-[0_1px_3px_rgb(199,238,255)] hover:brightness-150 font-semibold bg-black border-1 border-[#C7EEFF] items-center justify-center rounded-full sm:px-4 px-3 sm:py-1.5 py-1 transition"
+              >
+                <span class="sm:text-xs text-sm text-[#C7EEFF]">Show Credential</span>
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  class="w-4 h-4 lg:w-5 lg:h-5 ml-1 group-hover:translate-x-1.5 transition group-hover:-translate-y-0.5"
+                  viewBox="0 0 20 20" 
+                  fill="currentColor">
+                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                </svg>
+              </a>
             </div>
           </div>
-          <div class="flex flex-col items-center opacity-0">
-            <!-- Hidden placeholder -->
-            <div class="w-4 h-4 rounded-full sm:w-5 sm:h-5"></div>
-          </div>
-          <div class="ml-1 lg:ml-10 sm:ml-5">
-            <div class="text-xs font-light tracking-widest sm:hidden">
-              2024 October - 2025 June
+
+          <div class="relative flex">
+            <div class="flex">
+              <div
+                class="max-sm:hidden font-light tracking-widest lg:w-36 w-[6.5rem] lg:text-base text-sm"
+              >
+                2025 November - <span class="text-right">2028 November</span>
+              </div>
             </div>
-            <h2
-              class="mb-3 text-base font-semibold tracking-wide lg:text-lg sm:font-bold lg:mb-5"
-            >
-              SMK Amaliah 1&amp;2 Ciawi Bogor - Back End Developer
-            </h2>
-            <p
-              class="text-sm font-light leading-normal tracking-wider text-justify lg:text-base"
-            >
-              As a back-end developer for AM Agenda Pembelajaran Harian, I was
-              responsible for designing and implementing the system architecture
-              to ensure seamless attendance management for both teachers and
-              students at Amaliah Ciawi Vocational School. I optimized database
-              performance, and integrated authentication mechanisms to enhance
-              user experience. Additionally, I contributed to the web interface,
-              ensuring a responsive and user-friendly design that simplifies
-              daily learning management for teachers.
-            </p>
+            <div class="flex flex-col items-center opacity-0">
+              <!-- Hidden placeholder -->
+              <div class="w-4 h-4 rounded-full sm:w-5 sm:h-5"></div>
+            </div>
+            <div class="ml-1 lg:ml-10 sm:ml-5">
+              <div class="text-xs font-light tracking-widest sm:hidden">
+                2025 November - 2028 November
+              </div>
+    
+              <h2
+                class="text-base font-semibold tracking-wide lg:text-lg sm:font-bold"
+              >
+                Belajar Dasar AI
+              </h2>
+              <p
+                class="mb-1 lg:mb-2 text-sm font-medium tracking-wide text-[#0077C0] lg:text-base"
+              >
+                Dicoding Indonesia
+              </p>
+              <p
+                class="mb-4 text-xs font-light tracking-wider text-gray-500 lg:text-sm"
+              >
+                Credential ID: <span class="font-medium text-gray-600">N9ZO2L0DRPG5</span>
+              </p>
+              <a
+                href="https://www.dicoding.com/certificates/N9ZO2L0DRPG5"
+                target="_blank"
+                class="inline-flex group drop-shadow-[0_1px_3px_rgb(199,238,255)] hover:brightness-150 font-semibold bg-black border-1 border-[#C7EEFF] items-center justify-center rounded-full sm:px-4 px-3 sm:py-1.5 py-1 transition"
+              >
+                <span class="sm:text-xs text-sm text-[#C7EEFF]">Show Credential</span>
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  class="w-4 h-4 lg:w-5 lg:h-5 ml-1 group-hover:translate-x-1.5 transition group-hover:-translate-y-0.5"
+                  viewBox="0 0 20 20" 
+                  fill="currentColor">
+                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                </svg>
+              </a>
+            </div>
           </div>
+
+          <div class="relative flex">
+            <div class="flex">
+              <div
+                class="max-sm:hidden font-light tracking-widest lg:w-36 w-[6.5rem] lg:text-base text-sm"
+              >
+                2025 October
+              </div>
+            </div>
+            <div class="flex flex-col items-center opacity-0">
+              <!-- Hidden placeholder -->
+              <div class="w-4 h-4 rounded-full sm:w-5 sm:h-5"></div>
+            </div>
+            <div class="ml-1 lg:ml-10 sm:ml-5">
+              <div class="text-xs font-light tracking-widest sm:hidden">
+                2025 October
+              </div>
+    
+              <h2
+                class="text-base font-semibold tracking-wide lg:text-lg sm:font-bold"
+              >
+                Intro to Software Engineering
+              </h2>
+              <p
+                class="mb-1 lg:mb-2 text-sm font-medium tracking-wide text-[#0077C0] lg:text-base"
+              >
+                RevoU
+              </p>
+              <p
+                class="mb-4 text-xs font-light tracking-wider text-gray-500 lg:text-sm"
+              >
+                Credential ID: <span class="font-medium text-gray-600">CCSE 271025-01-1-00033</span>
+              </p>
+              <a
+                href="assets/files/certificates/Intro to Software Engineering - RevoU.pdf"
+                target="_blank"
+                class="inline-flex group drop-shadow-[0_1px_3px_rgb(199,238,255)] hover:brightness-150 font-semibold bg-black border-1 border-[#C7EEFF] items-center justify-center rounded-full sm:px-4 px-3 sm:py-1.5 py-1 transition"
+              >
+                <span class="sm:text-xs text-sm text-[#C7EEFF]">Show Credential</span>
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  class="w-4 h-4 lg:w-5 lg:h-5 ml-1 group-hover:translate-x-1.5 transition group-hover:-translate-y-0.5"
+                  viewBox="0 0 20 20" 
+                  fill="currentColor">
+                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="relative flex">
+            <div class="flex">
+              <div
+                class="max-sm:hidden font-light tracking-widest lg:w-36 w-[6.5rem] lg:text-base text-sm"
+              >
+                2024 July
+              </div>
+            </div>
+            <div class="flex flex-col items-center opacity-0">
+              <!-- Hidden placeholder -->
+              <div class="w-4 h-4 rounded-full sm:w-5 sm:h-5"></div>
+            </div>
+            <div class="ml-1 lg:ml-10 sm:ml-5">
+              <div class="text-xs font-light tracking-widest sm:hidden">
+                2024 July
+              </div>
+    
+              <h2
+                class="text-base font-semibold tracking-wide lg:text-lg sm:font-bold"
+              >
+                UI & UX Competition
+              </h2>
+              <p
+                class="mb-1 lg:mb-2 text-sm font-medium tracking-wide text-[#0077C0] lg:text-base"
+              >
+                Institut Bisnis dan Informatika Kesatuan
+              </p>
+              <p
+                class="mb-4 text-xs font-light tracking-wider text-gray-500 lg:text-sm"
+              >
+                Credential ID: <span class="font-medium text-gray-600">018/CIT/HIMA-TI/VII/2024</span>
+              </p>
+              <a
+                href="assets/files/certificates/UI&UX Competition - Crowd IT.pdf"
+                target="_blank"
+                class="inline-flex group drop-shadow-[0_1px_3px_rgb(199,238,255)] hover:brightness-150 font-semibold bg-black border-1 border-[#C7EEFF] items-center justify-center rounded-full sm:px-4 px-3 sm:py-1.5 py-1 transition"
+              >
+                <span class="sm:text-xs text-sm text-[#C7EEFF]">Show Credential</span>
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  class="w-4 h-4 lg:w-5 lg:h-5 ml-1 group-hover:translate-x-1.5 transition group-hover:-translate-y-0.5"
+                  viewBox="0 0 20 20" 
+                  fill="currentColor">
+                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+    
         </div>
       </div>
     </div>
